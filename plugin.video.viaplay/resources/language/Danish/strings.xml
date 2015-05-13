@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="4001">General</string>
+	<string id="4002">Brugernavn</string>
+	<string id="4003">Adgangskode</string>
+	<string id="4004">Platform</string>
+	
+	<string id="4005">Windows</string>
+	<string id="4006">Linux</string>
+	<string id="4007">Mac/osx</string>
+	<string id="4008">Denne add-on virker kun for Windows.</string>
+	<string id="4009">Vigtig information</string>
+	<string id="4010">Du skal indtaste legitimationsoplysninger for Viaplay.</string>
+	<string id="4011">Du er nødt til at genstarte XBMC, før du kan bruge Viaplay add-on.</string>
+	<string id="4012">Land</string>
+	<string id="4013">Sverige</string>
+	<string id="4014">Danmark</string>
+	<string id="4015">Film</string>
+	<string id="4016">TV</string>
+	<string id="4017">Sport</string>
+	<string id="4018">Indstillinger</string>
+	<string id="4019">Tilføj til favoritter.</string>
+	<string id="4020">Fjern favorit.</string>
+	<string id="4021">Ønsker du at fjerne din </string>
+	<string id="4022">Foretrukne tilsat.</string>
+	<string id="4023">Norge</string>
+	<string id="4024">Sæson </string>
+	<string id="4025">Episode </string>
+	<string id="4026">Finland</string>
+	<string id="4027">Få oplysninger om tv-serier fra theTvDB.com</string>
+	<string id="4028">Børn</string>
+	<string id="4029">Sort TV shows og film baseret på, hvornår de blev tilføjet</string>
+	<string id="4030">Bruge intern afspilning</string>
+	<string id="4031">Intern afspilning</string>
+	<string id="4032">Brug undertekster</string>
+	
+	<string id="4033">Kanaler</string>
+	<string id="4034">Mandag</string>
+	<string id="4035">Tirsdag</string>
+	<string id="4036">Onsdag</string>
+	<string id="4037">Torsdag</string>
+	<string id="4038">Fredag</string>
+	<string id="4039">Lørdag</string>
+	<string id="4040">Søndag</string>
+
+	<string id="4041">Markér som vist</string>
+	<string id="4042">Mark ikke vist</string>
+
+	<string id="4043">Stjerne Rated</string>
+	<string id="4044">Fjern stjernemarkering</string>
+	<string id="4045">Der er en nyere version af Viaplay addon</string>
+	<string id="4046">URL'en returnerede 404, afspilningen kan ikke fortsætte.</string>
+	<string id="4047">Aktivitetslisten</string>
+	<string id="4048">Stjernemærket</string>
+	<string id="4049">Forældrekontrol</string>
+	<string id="4050">Brug forældrekontrol</string>
+	<string id="4051">PIN-kode</string>
+	<string id="4052">Den angivne PIN-kode er forkert.</string>
+	<string id="4053">Indholdet er beskyttet af forældre kontrol, indtast PIN-kode:</string>
+	<string id="4054">Aldersgrænse for erotik</string>
+	<string id="4055">Denne sektion indeholder seksuelt indhold, </string>
+	<string id="4056">er du over 18 år?</string>
+	<string id="4057">Ja, jeg er over 18 år</string>
+	<string id="4058">Nej, jeg er under 18 år</string>
+	<string id="4059">Check for ny version ved opstart</string>
+</strings>

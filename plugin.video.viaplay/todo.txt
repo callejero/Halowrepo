@@ -1,0 +1,18 @@
+Att göra lista.
+
+ALLMÄNT
+---------------------------------------------------
+
+# Undersök möjligheten att kunna göra uppspelningen lite bättre genom att sätta silverlight spelaren i fullskärm.
+  
+
+FILM
+---------------------------------------------------
+
+# Ändra länkar till de olika kategorierna så att fler filmer visas.
+# Lägg till möjligheten att utföra sökning under huvudmenyn för Film, skall visa tangentbord.
+
+TV
+---------------------------------------------------
+
+# Lägg till möjligheten att utföra sökning under huvudmenyn för TV, skall visa tangentbord.

@@ -1,0 +1,90 @@
+{
+  "dsData": {
+    "-xmlns": "http://tempuri.org/DataSet1.xsd",
+    "Channels": [
+      {
+        "Country": "Sweden",
+        "Name": "TV3",
+        "Image": "TV3_SE.png",
+        "Url": "http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-se&productId=168763",
+        "EPG": "http://comspace.viasat.se/channel/0/V_1"
+      },
+      {
+        "Country": "Sweden",
+        "Name": "TV6",
+        "Image": "TV6.png",
+        "Url": "http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-se&productId=195780",
+        "EPG": "http://comspace.viasat.se/channel/0/V_2"
+      },
+      {
+        "Country": "Sweden",
+        "Name": "TV10",
+        "Image": "TV10.png",
+        "Url": "http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-se&productId=177478",
+        "EPG": "http://comspace.viasat.se/channel/0/V_4"
+      },
+      {
+        "Country": "Sweden",
+        "Name": "Viasat Film",
+        "Image": "Viasat_Film.png",
+        "Url": "http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-se&productId=141393",
+        "EPG": "http://comspace.viasat.se/channel/0/V_16"
+      },
+      {
+        "Country": "Denmark",
+        "Name": "TV3",
+        "Image": "TV3_DK.png",
+        "Url": "http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-dk&productId=168768",
+        "EPG": "http://comspace.viasat.dk/channel/0/V_25"
+      },
+      {
+        "Country": "Denmark",
+        "Name": "TV3 Puls",
+        "Image": "TV3_Puls.png",
+        "Url": "http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-dk&productId=187754",
+        "EPG": "http://comspace.viasat.dk/channel/0/V_27"
+      },
+      {
+        "Country": "Denmark",
+        "Name": "Viasat Film",
+        "Image": "Viasat_Film.png",
+        "Url": "http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-dk&productId=141393",
+        "EPG": "http://comspace.viasat.dk/channel/0/V_30"
+      },
+      {
+        "Country": "Norway",
+        "Name": "TV3",
+        "Image": "TV3_No.png",
+        "Url": "http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-no&productId=177477",
+        "EPG": "http://comspace.viasat.no/channel/0/V_47"
+      },
+      {
+        "Country": "Norway",
+        "Name": "TV6",
+        "Image": "TV6.png",
+        "Url": "http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-no&productId=209210",
+        "EPG": "http://comspace.viasat.no/channel/0/A_28"
+      },
+      {
+        "Country": "Norway",
+        "Name": "Viasat4",
+        "Image": "Viasat4.png",
+        "Url": "http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-no&productId=183235",
+        "EPG": "http://comspace.viasat.no/channel/0/V_48"
+      },
+      {
+        "Country": "Norway",
+        "Name": "Viasat Film",
+        "Image": "Viasat_Film.png",
+        "Url": "http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-no&productId=141393",
+        "EPG": "http://comspace.viasat.no/channel/0/V_42"
+      },
+      {
+        "Country": "Finland",
+        "Name": "Viasat Film",
+        "Image": "Viasat_Film.png",
+        "Url": "http://play.viaplay.fi/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&deviceKey=pc-fi&productId=141393"
+      }
+    ]
+  }
+}
