@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="4001">General</string>
+	<string id="4002">Username</string>
+	<string id="4003">Password</string>
+	<string id="4004">Platform</string>
+	
+	<string id="4005">Windows</string>
+	<string id="4006">Linux</string>
+	<string id="4007">Mac/osx</string>
+	<string id="4008">This add-on is only supported on Windows</string>
+	<string id="4009">Important information</string>
+	<string id="4010">You need to supply user credentials for Viaplay.</string>
+	<string id="4011">You need to restart XBMC before you can use the Viaplay add-on.</string>
+	<string id="4012">Country</string>
+	<string id="4013">Sweden</string>
+	<string id="4014">Denmark</string>
+	<string id="4015">Film</string>
+	<string id="4016">TV</string>
+	<string id="4017">Sports</string>
+	<string id="4018">Settings</string>
+	<string id="4019">Add as favorite.</string>
+	<string id="4020">Remove favorite.</string>
+	<string id="4021">Do you want to remove favorite </string>
+	<string id="4022">Favorite added.</string>
+	<string id="4023">Norway</string>
+	<string id="4024">Season </string>
+	<string id="4025">Episode </string>
+	<string id="4026">Finland</string>
+	<string id="4027">Get information about TV-series from theTvDB.com</string>
+	<string id="4028">Children</string>
+	<string id="4029">Sort TV-series and Movies by when they were added</string>
+	<string id="4030">Use IPAD-profile for playback</string>
+	<string id="4031">Internal playback</string>
+	<string id="4032">Use subtitles</string>
+	<string id="4033">Channels</string>
+	
+	<string id="4034">Monday</string>
+	<string id="4035">Tuesday</string>
+	<string id="4036">Wednesday</string>
+	<string id="4037">Thursday</string>
+	<string id="4038">Friday</string>
+	<string id="4039">Saturday</string>
+	<string id="4040">Sunday</string>
+
+	<string id="4041">Mark as shown</string>
+	<string id="4042">Mark as not shown</string>
+
+	<string id="4043">Star Rated</string>
+	<string id="4044">Unstar</string>
+	<string id="4045">There's a newer version available of the Viaplay addon</string>
+	<string id="4046">The URL returned 404, playback cannot continue.</string>
+	<string id="4047">Activity list</string>
+	<string id="4048">Starred</string>
+	<string id="4049">Parental control</string>
+	<string id="4050">Use parental control</string>
+	<string id="4051">PIN-code</string>
+	<string id="4052">Entered PIN code is incorrect.</string>
+	<string id="4053">The content is protected by parental control, enter pin-code:</string>
+	<string id="4054">Age limit for erotica</string>
+	<string id="4055">This section contains sexual content,</string>
+	<string id="4056">are you over 18?</string>
+	<string id="4057">Yes, I am over 18 years</string>
+	<string id="4058">No, I am under 18 years</string>
+	<string id="4059">Check for a new version on startup</string>
+</strings>

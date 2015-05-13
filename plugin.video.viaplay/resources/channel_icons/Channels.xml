@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="yes"?>
+<dsData xmlns="http://tempuri.org/DataSet1.xsd">
+  <Channels>
+    <Country>Sweden</Country>
+    <Name>TV3</Name>
+	<Image>TV3_SE.png</Image>
+	<Url>http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-se&amp;productId=168763</Url>
+    <EPG>http://comspace.viasat.se/channel/0/V_1</EPG>
+  </Channels>
+  <Channels>
+    <Country>Sweden</Country>
+    <Name>TV6</Name>
+	<Image>TV6.png</Image>
+	<Url>http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-se&amp;productId=195780</Url>
+    <EPG>http://comspace.viasat.se/channel/0/V_2</EPG>
+  </Channels>
+  <Channels>
+    <Country>Sweden</Country>
+    <Name>TV10</Name>
+	<Image>TV10.png</Image>
+	<Url>http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-se&amp;productId=177478</Url>
+    <EPG>http://comspace.viasat.se/channel/0/V_4</EPG>
+  </Channels>
+  <Channels>
+    <Country>Sweden</Country>
+    <Name>Viasat Film</Name>
+	<Image>Viasat_Film.png</Image>
+	<Url>http://play.viaplay.se/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-se&amp;productId=141393</Url>
+    <EPG>http://comspace.viasat.se/channel/0/V_16</EPG>
+  </Channels>
+  
+  <Channels>
+    <Country>Denmark</Country>
+    <Name>TV3</Name>
+	<Image>TV3_DK.png</Image>
+	<Url>http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-dk&amp;productId=168768</Url>
+    <EPG>http://comspace.viasat.dk/channel/0/V_25</EPG>
+  </Channels>
+  <Channels>
+    <Country>Denmark</Country>
+    <Name>TV3 Puls</Name>
+	<Image>TV3_Puls.png</Image>
+	<Url>http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-dk&amp;productId=187754</Url>
+    <EPG>http://comspace.viasat.dk/channel/0/V_27</EPG>
+  </Channels>
+  <Channels>
+    <Country>Denmark</Country>
+    <Name>Viasat Film</Name>
+	<Image>Viasat_Film.png</Image>
+	<Url>http://play.viaplay.dk/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-dk&amp;productId=141393</Url>
+    <EPG>http://comspace.viasat.dk/channel/0/V_30</EPG>
+  </Channels>
+  
+  <Channels>
+    <Country>Norway</Country>
+    <Name>TV3</Name>
+	<Image>TV3_No.png</Image>
+	<Url>http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-no&amp;productId=177477</Url>
+    <EPG>http://comspace.viasat.no/channel/0/V_47</EPG>
+  </Channels>
+  <Channels>
+    <Country>Norway</Country>
+    <Name>TV6</Name>
+	<Image>TV6.png</Image>
+	<Url>http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-no&amp;productId=209210</Url>
+    <EPG>http://comspace.viasat.no/channel/0/A_28</EPG>
+  </Channels>
+  <Channels>
+    <Country>Norway</Country>
+    <Name>Viasat4</Name>
+	<Image>Viasat4.png</Image>
+	<Url>http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-no&amp;productId=183235</Url>
+    <EPG>http://comspace.viasat.no/channel/0/V_48</EPG>
+  </Channels>
+  <Channels>
+    <Country>Norway</Country>
+    <Name>Viasat Film</Name>
+	<Image>Viasat_Film.png</Image>
+	<Url>http://play.viaplay.no/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-no&amp;productId=141393</Url>
+    <EPG>http://comspace.viasat.no/channel/0/V_42</EPG>
+  </Channels>
+  
+  <Channels>
+    <Country>Finland</Country>
+    <Name>Viasat Film</Name>
+	<Image>Viasat_Film.png</Image>
+	<Url>http://play.viaplay.fi/api/stream/v1{?deviceId,deviceName,deviceType,userAgent}&amp;deviceKey=pc-fi&amp;productId=141393</Url>
+    <EPG></EPG>
+  </Channels>
+</dsData>

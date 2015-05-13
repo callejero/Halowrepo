@@ -1,0 +1,171 @@
+Version 2.0.8
+- Fixed script error when browsing TV.
+- Fixed some issues in AutoHotKey script (MceRemoteHandler.exe) for automatic playback on Windows.
+- Playback on other platforms than Windows should work better, Mac will use Safari and the default browser will be used on Linux.
+
+Version 2.0.7
+- Fixed problems with browsing content when running the addon on Kodi 14.
+- Automation script for AutoHotKey (used when starting playback in fullscreen on Windows) now handles KODI as well as XBMC.
+- Fixed problem when trying to playback movies.
+- Updated the Viaplay logo.
+
+Version 2.0.6
+- Fixed problem with launching playback when using Danish, Norwegian and Finnish Viaplay.
+- Added path alternatives for Chrome on Windows.
+- Added new setting for turning on/off basic version check.
+- Added support for basic version check on startup (it's turned on by default).
+
+Version 2.0.5
+- Fixed problems with launching Chrome on Windows.
+
+Version 2.0.4
+- Changed to Chrome instead of IE due to automatic login not working in IE.
+- Playback was broken because of changes made by Viaplay.
+- MceRemoteHandler will now start the playback on Windows.
+
+Version 2.0.3
+- Fixed some issues with fullscreen not being applied on Windows and when using the Mceremotehandler.
+- Parental Control for Movies has been implemented and are now supported (you need to activate it on the Viaplay website and in the addon settings).
+- Added support for Adult content (this requires duouble pin-code (one for browsing and one for playback) if parental control is activated).
+- The handling of Play channels has been rewritten.
+- Added support for EPG for Play channels (the current program with starting time is shown in the title).
+- Minor bug fixes.
+
+Version 2.0.2
+- Fixed problems due to Windows username containing characters åäö, this affected paths etc in the addon.
+- Added support for Back (on MCE remote), backspace and the x key on keyboard to end playback (on Windows).
+- Added Starred content to the main menu so all starred content is shown.
+- Added Activitylist to main menu.
+
+Version 2.0.1
+- minor bugfixes.
+
+Version 2.0.0
+- The TV section is redone
+- Added Season to tv-series.
+- Added support for Cover Art for Season.
+- The Movie section is redone
+- The Sports section is redone
+- The Children section is redone
+- Added support for starred content, you can now add/remove starred content directly from within the addon (this requires login credentials).
+- Favorites has been replaced by Starred content and works across all content such as TV, Movies and Sports, it's available under each section.
+- The playback has been redone and the Viaplaylauncher is removed, it now uses a standard Internet Explorer in kiosk mode, automatic login is now handled by Viaplay.
+- The remote control handler (MCERemotehandler.exe for Windows) has been redone to work with Viaplays new Silverlight player.
+- Country specific content (links) has been updated.
+- Support for watched content for all sections TV, Movies and Sports.
+ 
+Version 1.3.9
+- Fixed a problem that resulted in script errors when browsing TV and movies, this was due to changes on the Viaplay website.
+
+Version 1.3.8
+- Added support for Linux (supported XBMCbuntu with version 12 of XBMC).
+
+Version 1.3.7
+- Added support for channels, a new main menu called Channels will list the available channels for the specific country (all nordic countries are supported).
+
+Version 1.3.6
+- Added support for primary screen when using mutiple displays (the setting from Xbmc are used).
+
+Version 1.3.5
+- Changed the way covers are loaded for movies, tv and sports, the covers are now cached.
+- Added default Viaplay logo for episodes/sports that are missing episode/event image.
+
+Version 1.3.4
+- Added a new section under settings for "internal playback"
+- Added support for switching subtitles on/off for "internal playback"
+
+Version 1.3.3
+- Added support for subtitles when using playback from xbmc.
+
+Version 1.3.2
+- Updated Viaplaylauncher with working version.
+- Increased timeout for chromedriver.
+
+Version 1.3.1
+- This Version is only for test.
+- Added support for playback using IPAD profile.
+- New setting for IPAD profile to switch on/off.
+- TV and movies are filtered by the IPAD setting, showing only content available.
+
+Version 1.3.0
+- Fixed script error in Sports Schedule, this was due to changes done by Viaplay.
+
+Version 1.2.9
+- The loginpage for Viaplay does not work anymore, changes has been made to viaplaylauncher so that automatic login works.
+
+Version 1.2.8
+- Corrected a script error when selecting hockey in the Live Sports section.
+- Added thumbnails for main menu items.
+
+Version 1.2.7
+- Added support for activating maximum bitrate when using Viaplay's videoplayer (this only works for Windows and is available in fullscreen).
+Use the channel up button on the MCE remote or use CTRL+SHIFT+B.
+- XBMC is activated after stopping playback in the viaplaylauncher.exe.
+- Added support for special characters in paths, this could cause script errors when using a username in Windows which contained special characters.
+- Loadtime from the TVdb has been reduced to more than half the time, this due to caching.
+
+Version 1.2.6
+- Some errors from loading content from the TVdb has been fixed.
+- Fixed some script errors when loading episodes, due to changes in the viaplay website.
+- Corrected a few errors when loading fanart from viaplay website.
+- Some links for series pointed to single episodes, each link is now scanned and the link to the series page is retrieved.
+- Added support for XBMC remote commands in Viaplaylauncer.exe.
+- The automatic login has been improved even further and should now use the login page for the correct country.
+- The automatic playback has been adjusted to work even better.
+
+Version 1.2.5
+- Added support for Internet Explorer 10 and Windows 8 when using viaplaylauncher.exe (on Windows).
+- The automatic login should now work much better and quicker than before when using viaplaylauncher.exe.
+- Live Sport Schedule now handles several sport events at the same start time.
+- Live Sport Schedule now tags sport events that are in HD with the suffix "- HD".
+- Added a new menuitem under the main menu for a Childrens menu (it has a sub menu which is divided into Movies and TV). 
+
+Version 1.2.4
+- Fixed that expisodes wasn't tagged as watched on XBMC 12 (Frodo).
+- Added setting for using information from www.thetvdb.com on TV-Series.
+- Added support for retrieving information, episode thumbnails and fan art from the TVDB.
+- Added support for Finnish Viaplay (www.viaplay.fi).
+- Added translation for Finnish.
+- Added setting for sorting by newest tv-series or movie.
+- Minor buggfixes.
+
+Version 1.2.3
+- Complete support for MCE remote on Windows (when running viaplaylauncher.exe) using AutoHotKey scripting.
+- Added support for Norwegian Viaplay (www.viaplay.no).
+- The add-on is translated to Norwegian.
+- Shown episodes are marked as watched when played or can be set through a context menu.
+  This only works in XBMC 11 (Eden), for now this functionality is not available in XBMC 12 (Frodo). 
+- Buggfixes.
+
+Version 1.2.2
+- Video playback is now forced to fullscreen when playback is started.
+- When in fullscreen you can now exit by pressing "x".
+- Added support for TV favorites.
+- Improved the viaplaylauncher.exe for Windows.
+- The playback of selected episode, movie or sport event has been rewritten.
+- Buggfixes.
+
+Version 1.2.1
+- Internal build for test.
+
+Version 1.2.0
+- Added support for Danish Viaplay.
+- The add-on is translated to Danish, some translations has been made by Google Translate.
+- Added support for Live Sport and Live Schedule (tablå/oversigt).
+- Added settings to main menu.
+- Minor buggfixes.
+
+Version 1.1.1
+- Removed explicit Windows check in order to support Max OS X.
+- Movies with HD content now show this with an overlay HD mark.
+- Fanart is used when browsing episodes.
+- Minor buggfixes.
+
+Version 1.1.0
+- Added support for Mac OS X
+- The number of movies loaded per category is now 100 instead of 28.
+- Added search functionality for TV.
+- Added search functionality for Movies.
+
+Version 1.0.0
+- Initial version.
