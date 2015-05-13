@@ -84,7 +84,7 @@ def Categories():
            xbmc.executebuiltin("UpdateLocalAddons")
 
            
-    AddDir("[COLOR orange][B]Coutry Channels[/B][/COLOR]",'movies',44 ,"http://www.addresslibrary.com/images/country.jpg")
+    AddDir("[COLOR orange][B]Country Channels[/B][/COLOR]",'movies',44 ,"http://www.addresslibrary.com/images/country.jpg")
     AddDir("[COLOR Pink][B]Live Football today[/B][/COLOR]", Raw+"CzHx9fYM" ,4 ,"http://www.bestappspoint.com/wp-content/uploads/2012/02/epl-live.jpg")
     AddDir("[COLOR green][B]SPORT  LIVE TV[/B][/COLOR]", Raw+"MqqxxXaT" ,4 ,"http://themetoday.com/wp-content/uploads/2010/01/Various-Sport_Icons.jpg")
     AddDir("[COLOR blue][B]Football Replays[/B][/COLOR]", "REPLAYS" ,150 ,"http://3.bp.blogspot.com/-a3BcIcfxTTw/VO7-K7t9tgI/AAAAAAAAKdA/_yDy5iOo7sE/s1600/FOOTBALL%2BREPLAYS.PNG")    
