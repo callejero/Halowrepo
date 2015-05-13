@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="ShelfFade">
+        <animation effect="fade" end="100" delay="200" time="220">Visible</animation>
+        <animation effect="fade" end="0" time="100">Hidden</animation>
+    </include>
+    <include name="ShelfTitle">
+        <left>90</left>
+        <top>60</top>
+        <height>45</height>
+        <width>750</width>
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>size27</font>
+        <textcolor>White2</textcolor>
+        <shadowcolor>Shadow</shadowcolor>
+    </include>
+    <include name="MoviesShortcutsCommons">
+        <include>ShelfFade</include>
+        <top>100</top>
+        <width>1920</width>
+        <height>500</height>
+        <orientation>horizontal</orientation>
+        <scrolltime>400</scrolltime>
+        <itemlayout height="350" width="295">
+            <control type="image" description="Reflection">
+                <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>400</top>
+                <width>260</width>
+                <height>390</height>
+                <texture fallback="DefaultVideoCover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image" description="Reflection">
+                <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>400</top>
+                <width>260</width>
+                <height>390</height>
+                <texture fallback="DefaultVideoCover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+                <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>16</top>
+                <width>260</width>
+                <height>384</height>
+                <texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+                <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>16</top>
+                <width>260</width>
+                <height>384</height>
+                <texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+        </itemlayout>
+        <focusedlayout height="420" width="295">
+            <control type="image" description="Reflection">
+                <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <animation effect="fade" start="100" end="0" time="400">Focus</animation>
+                <animation effect="fade" start="0" end="100" time="400">unFocus</animation>
+                <left>92</left>
+                <top>400</top>
+                <width>260</width>
+                <height>390</height>
+                <texture fallback="DefaultVideoCover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image" description="Reflection">
+                <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <animation effect="fade" start="100" end="0" time="400">Focus</animation>
+                <animation effect="fade" start="0" end="100" time="400">unFocus</animation>
+                <left>92</left>
+                <top>400</top>
+                <width>260</width>
+                <height>390</height>
+                <texture fallback="DefaultVideoCover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+                <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>16</top>
+                <width>260</width>
+                <height>384</height>
+                <texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+                <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                <left>92</left>
+                <top>16</top>
+                <width>260</width>
+                <height>384</height>
+                <texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="group" description="labels">
+                <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+                <animation effect="fade" start="100" end="0" time="200">unFocus</animation>
+                <control type="image">
+                    <visible>ControlGroup(700).HasFocus() + !IsEmpty(Listitem.Label2)</visible>
+                    <include>VisibleFade</include>
+                    <centerleft>224</centerleft>
+                    <top>370</top>
+                    <width>260</width>
+                    <height>30</height>
+                    <texture>images/Black.png</texture>
+                    <colordiffuse>99FFFFFF</colordiffuse>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="label">
+                    <visible>ControlGroup(700).HasFocus() + !IsEmpty(Listitem.Label2)</visible>
+                    <centerleft>224</centerleft>
+                    <top>370</top>
+                    <width>260</width>
+                    <height>30</height>
+                    <font>size24</font>
+                    <textcolor>White2</textcolor>
+                    <autoscroll>false</autoscroll>
+                    <label>[B]$INFO[ListItem.Label2][/B]</label>
+                    <align>center</align>
+                </control>
+                <control type="textbox">
+                    <visible>ControlGroup(700).HasFocus()</visible>
+                    <centerleft>224</centerleft>
+                    <top>410</top>
+                    <width>296</width>
+                    <height>60</height>
+                    <font>size24</font>
+                    <textcolor>White2</textcolor>
+                    <autoscroll>false</autoscroll>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                    <align>center</align>
+                </control>
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="SquareShortcutsCommons">
+        <include>ShelfFade</include>
+        <!--<left>72</left>-->
+        <top>140</top>
+        <width>1920</width>
+        <height>402</height>
+        <orientation>horizontal</orientation>
+        <scrolltime>400</scrolltime>
+        <itemlayout height="357" width="354">
+            <control type="image" description="Reflection">
+                <left>99</left>
+                <top>330</top>
+                <width>303</width>
+                <height>303</height>
+                <texture fallback="DefaultAlbumcover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="image">
+                <left>99</left>
+                <top>27</top>
+                <width>303</width>
+                <height>303</height>
+                <texture fallback="DefaultAlbumcover.png" background="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+        </itemlayout>
+        <focusedlayout height="357" width="354">
+            <control type="group">
+                <control type="image" description="Reflection">
+                    <left>99</left>
+                    <top>330</top>
+                    <width>303</width>
+                    <height>303</height>
+                    <texture fallback="DefaultAlbumcover.png" background="true" diffuse="images/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>Control.IsVisible(313)+!Skin.HasSetting(RecordOff) + !Skin.HasSetting(MusicShelf_Custom)</visible>
+                    <animation effect="slide" end="0,-60" time="400" delay="100">Focus</animation>
+                    <left>99</left>
+                    <top>27</top>
+                    <width>303</width>
+                    <height>303</height>
+                    <texture background="true">images/record.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <left>99</left>
+                    <top>27</top>
+                    <width>303</width>
+                    <height>303</height>
+                    <texture fallback="DefaultAlbumcover.png" background="true">$INFO[ListItem.Thumb]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="textbox">
+                    <visible>ControlGroup(700).HasFocus()</visible>
+                    <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="80">unFocus</animation>
+                    <left>79</left>
+                    <top>340</top>
+                    <width>345</width>
+                    <height>60</height>
+                    <font>size26</font>
+                    <textcolor>White2</textcolor>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="movshelslider">
+        <control type="image">
+            <visible>Control.HasFocus(311)</visible>
+            <left>80</left>
+            <top>104</top>
+            <width>284</width>
+            <height>408</height>
+            <texture border="10=">images/SliderWL.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <animation effect="fade" time="220">VisibleChange</animation>
+            <animation condition="Container(311).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(311).Position(1)" effect="slide" start="0,0" end="295,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(311).Position(2)" effect="slide" start="0,0" end="590,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(311).Position(3)" effect="slide" start="0,0" end="885,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(311).Position(4)" effect="slide" start="0,0" end="1180,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(311).Position(5)" effect="slide" start="0,0" end="1475,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        </control>
+    </include>
+    <include name="Movies">
+        <control type="panel" id="311" description="TOP Shortcuts">
+            <visible>Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
+            <onup>9009</onup>
+            <ondown>9000</ondown>
+            <onleft>311</onleft>
+            <onright>311</onright>
+            <include>MoviesShortcutsCommons</include>
+            <content target="video">$VAR[shelfmovies]</content>
+        </control>
+        <include>movshelslider</include>
+    </include>
+    <include name="tvshelfslider">
+        <control type="image">
+            <visible>Control.HasFocus(312)</visible>
+            <left>80</left>
+            <top>104</top>
+            <width>284</width>
+            <height>408</height>
+            <texture border="10=">images/SliderWL.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <animation effect="fade" time="220">VisibleChange</animation>
+            <animation condition="Container(312).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(312).Position(1)" effect="slide" start="0,0" end="295,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(312).Position(2)" effect="slide" start="0,0" end="590,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(312).Position(3)" effect="slide" start="0,0" end="885,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(312).Position(4)" effect="slide" start="0,0" end="1180,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(312).Position(5)" effect="slide" start="0,0" end="1475,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        </control>
+    </include>
+    <include name="TV">
+        <control type="group">
+            <visible>Library.HasContent(TVShows)</visible>
+            <control type="panel" id="312" description="TOP Shortcuts">
+                <visible>[Library.HasContent(TVShows) | !Skin.HasSetting(TVShelf_Watchlist)] + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
+                <onup>9009</onup>
+                <ondown>9000</ondown>
+                <onleft>312</onleft>
+                <onright>312</onright>
+                <include>MoviesShortcutsCommons</include>
+                <content target="video">$VAR[shelfTV]</content>
+            </control>
+            <include>tvshelfslider</include>
+        </control>
+    </include>
+    <include name="Music_RA">
+        <control type="panel" id="313" description="TOP Shortcuts">
+            <visible>[Library.HasContent(musicvideos) | Library.HasContent(music) | Skin.HasSetting(MusicShelf_Custom)] + [Container(9000).HasFocus(342) | Control.HasFocus(313)]</visible>
+            <onup>noop</onup>
+            <ondown>9000</ondown>
+            <onleft>noop</onleft>
+            <onright>noop</onright>
+            <focusposition>2</focusposition>
+            <include>SquareShortcutsCommons</include>
+            <content target="music">special://skin/resources/rcntalbums.xsp</content>
+        </control>
+        <control type="image">
+            <visible>Control.HasFocus(313)</visible>
+            <left>88</left>
+            <top>157</top>
+            <width>322</width>
+            <height>324</height>
+            <texture border="20">images/GeneralSlider.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <animation effect="fade" time="220">VisibleChange</animation>
+            <animation condition="Container(313).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(313).Position(1)" effect="slide" start="0,0" end="354,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(313).Position(2)" effect="slide" start="0,0" end="708,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(313).Position(3)" effect="slide" start="0,0" end="1062,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            <animation condition="Container(313).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        </control>
+    </include>
+    <include name="Addons_Shortcuts">
+        <control type="group">
+            <control type="panel" id="315" description="TOP Shortcuts">
+                <visible>Container(9000).HasFocus(343) | Control.HasFocus(315)</visible>
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>315</onleft>
+                <onright>315</onright>
+                <include>SquareShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.1.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.1.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.1.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.1.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="2" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.2.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.2.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.2.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.2.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="3" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.3.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.3.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.3.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.3.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="4" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.4.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.4.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.4.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.4.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="5" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.5.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.5.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.5.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.5.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="6" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.6.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.6.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.6.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.6.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="7" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.7.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.7.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.7.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.7.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="8" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.8.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.8.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.8.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.8.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="9" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.9.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.9.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.9.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.9.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="10" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.10.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.10.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.10.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.10.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="11" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.11.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.11.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.11.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.11.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="12" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.12.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.12.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.12.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.12.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="13" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.13.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.13.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.13.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.13.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="14" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.14.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.14.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.14.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.14.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="15" description="Addons">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.15.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.15.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.15.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.15.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="16" description="Fav">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.16.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfAddons.16.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfAddons.16.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfAddons.16.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="17" description="Fav">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.17.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfAddons.17.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfAddons.17.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfAddons.17.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="18" description="Fav">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.18.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfAddons.18.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfAddons.18.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfAddons.18.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="19" description="Fav">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.19.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfAddons.19.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfAddons.19.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfAddons.19.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="20" description="Fav">
+                        <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.20.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfAddons.20.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfAddons.20.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfAddons.20.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <visible>Control.HasFocus(315)</visible>
+                <left>88</left>
+                <top>157</top>
+                <width>322</width>
+                <height>322</height>
+                <texture border="20">images/GeneralSlider.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" time="220">VisibleChange</animation>
+                <animation condition="Container(315).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(315).Position(1)" effect="slide" start="0,0" end="354,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(315).Position(2)" effect="slide" start="0,0" end="708,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(315).Position(3)" effect="slide" start="0,0" end="1062,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(315).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="VAddons_Shortcuts">
+        <control type="group">
+            <control type="label" description="Top Label">
+                <visible>Control.IsVisible(317)</visible>
+                <include>ShelfTitle</include>
+                <include>ShelfFade</include>
+                <label>[B]$INFO[Container(317).ListItem.Property(ItemType)][/B]</label>
+            </control>
+            <control type="panel" id="317" description="TOP Shortcuts">
+                <visible>Container(9000).HasFocus(355) | Control.HasFocus(317)</visible>
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>317</onleft>
+                <onright>317</onright>
+                <include>SquareShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.1.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.1.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.1.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.1.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="2" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.2.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.2.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.2.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.2.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="3" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.3.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.3.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.3.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.3.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="4" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.4.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.4.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.4.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.4.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="5" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.5.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.5.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.5.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.5.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="6" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.6.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.6.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.6.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.6.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="7" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.7.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.7.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.7.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.7.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="8" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.8.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.8.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.8.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.8.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="9" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.9.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.9.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.9.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.9.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="10" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.10.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.10.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.10.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.10.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="11" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.11.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.11.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.11.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.11.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="12" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.12.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.12.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.12.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.12.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="13" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.13.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.13.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.13.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.13.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="14" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.14.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.14.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.14.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.14.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="15" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfVAddons.15.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfVAddons.15.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfVAddons.15.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfVAddons.15.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <visible>Control.HasFocus(317)</visible>
+                <left>88</left>
+                <top>157</top>
+                <width>322</width>
+                <height>322</height>
+                <texture border="20">images/GeneralSlider.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" time="220">VisibleChange</animation>
+                <animation condition="Container(317).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(317).Position(1)" effect="slide" start="0,0" end="354,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(317).Position(2)" effect="slide" start="0,0" end="708,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(317).Position(3)" effect="slide" start="0,0" end="1062,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(317).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="Pictures_Shortcuts">
+        <control type="group">
+            <control type="label" description="Top Label">
+                <visible>Control.IsVisible(314)</visible>
+                <include>ShelfFade</include>
+                <include>ShelfTitle</include>
+                <label>[B]$INFO[Container(314).ListItem.Property(ItemType)][/B]</label>
+            </control>
+            <control type="panel" id="314" description="TOP Shortcuts">
+                <visible>Container(9000).HasFocus(344) | Control.HasFocus(314)</visible>
+                <onup></onup>
+                <ondown>9000</ondown>
+                <onleft>314</onleft>
+                <onright>314</onright>
+                <include>SquareShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Addons">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.1.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.1.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.1.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.1.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="2" description="Addons">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.2.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.2.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.2.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.2.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="3" description="Addons">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.3.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.3.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.3.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.3.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="4" description="Addons">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.4.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.4.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.4.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.4.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="5" description="Addons">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.5.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.5.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.5.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.5.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="6" description="Script">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.6.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.6.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.6.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.6.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="7" description="Script">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.7.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.7.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.7.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.7.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="8" description="Script">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.8.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.8.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.8.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.8.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="9" description="Script">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.9.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.9.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.9.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.9.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="10" description="Script">
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.10.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.10.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.10.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.10.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="11" description="Fav">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.11.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfPictures.11.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfPictures.11.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfPictures.11.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="12" description="Fav">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.12.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfPictures.12.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfPictures.12.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfPictures.12.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="13" description="Fav">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.13.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfPictures.13.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfPictures.13.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfPictures.13.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="14" description="Fav">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.14.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfPictures.14.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfPictures.14.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfPictures.14.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                    <item id="15" description="Fav">
+                        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+                        <visible>!IsEmpty(Skin.String(ShelfPictures.15.Path))</visible>
+                        <label>$INFO[Skin.String(ShelfPictures.15.Label)]</label>
+                        <thumb>$INFO[Skin.String(ShelfPictures.15.Icon)]</thumb>
+                        <onclick>$INFO[Skin.String(ShelfPictures.15.Path)]</onclick>
+                        <property name="ItemType">$LOCALIZE[111]</property>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <visible>Control.HasFocus(314)</visible>
+                <left>88</left>
+                <top>157</top>
+                <width>322</width>
+                <height>322</height>
+                <texture border="20">images/GeneralSlider.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" time="220">VisibleChange</animation>
+                <animation condition="Container(314).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(314).Position(1)" effect="slide" start="0,0" end="354,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(314).Position(2)" effect="slide" start="0,0" end="708,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(314).Position(3)" effect="slide" start="0,0" end="1062,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(314).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="weather_shelf">
+        <control type="group">
+            <animation condition="!Container(9000).Row(0) | Container(9000).HasPrevious()" effect="slide" start="0,0" end="0,-500" time="220">Conditonal</animation>
+            <top>60</top>
+            <visible>[Container(9000).HasFocus(345)]</visible>
+            <include>ShelfFade</include>
+            <control type="label">
+                <left>83</left>
+                <top>20</top>
+                <width>1754</width>
+                <height>40</height>
+                <align>center</align>
+                <label>[B]$INFO[Weather.Location][/B]</label>
+            </control>
+            <control type="image">
+                <left>83</left>
+                <top>70</top>
+                <width>1754</width>
+                <height>350</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true">images/weathersingle.png</texture>
+            </control>
+            <control type="image">
+                <left>83</left>
+                <top>420</top>
+                <width>1754</width>
+                <height>350</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true" diffuse="images/ReflectionShelf.png" flipy="true">images/weathersingle.png</texture>
+            </control>
+            <control type="list" id="414" description="TOP Weather">
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <orientation>horizontal</orientation>
+                <left>85</left>
+                <top>70</top>
+                <width>1760</width>
+                <height>418</height>
+                <itemlayout width="250">
+                    <control type="label">
+                        <centercenterleft>125</centercenterleft>
+                        <top>160</top>
+                        <height>45</height>
+                        <width>250</width>
+                        <align>center</align>
+                        <shadowcolor>Black</shadowcolor>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <centerleft>125</centerleft>
+                        <top>200</top>
+                        <height>100</height>
+                        <width>250</width>
+                        <align>center</align>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="label" description="Conditions">
+                        <centerleft>125</centerleft>
+                        <top>290</top>
+                        <height>45</height>
+                        <width>250</width>
+                        <font>size21</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(Conditions)]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <height>150</height>
+                        <width>250</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="250">
+                    <control type="label">
+                        <centerleft>125</centerleft>
+                        <top>160</top>
+                        <height>45</height>
+                        <width>250</width>
+                        <align>center</align>
+                        <shadowcolor>Black</shadowcolor>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <centerleft>125</centerleft>
+                        <top>200</top>
+                        <height>100</height>
+                        <width>250</width>
+                        <align>center</align>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="label" description="Conditions">
+                        <centerleft>125</centerleft>
+                        <top>290</top>
+                        <height>45</height>
+                        <width>250</width>
+                        <font>size21</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(Conditions)]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <height>150</height>
+                        <width>250</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="0">
+                        <label>33006</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day0.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day0.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day0.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="1">
+                        <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day1.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day1.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="2">
+                        <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day2.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day2.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="3">
+                        <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day3.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day3.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="4">
+                        <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day4.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day4.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="5">
+                        <label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day5.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day5.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day5.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day5.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="6">
+                        <label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day6.LowTemp)][CR]Max:  $INFO[Window(Weather).Property(Day6.HighTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day6.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day6.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <left>85</left>
+                <top>70</top>
+                <width>1750</width>
+                <height>360</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true">images/weathersingleover.png</texture>
+            </control>
+        </control>
+    </include>
+    <include name="Favsshelf">
+        <control type="group">
+            <control type="label" description="Top Label">
+                <visible>Control.IsVisible(319)</visible>
+                <include>ShelfFade</include>
+                <include>ShelfTitle</include>
+                <label>[B] $LOCALIZE[1036] [/B]</label>
+            </control>
+            <control type="panel" id="319" description="TOP Shortcuts">
+                <visible>IntegerGreaterThan(Window.Property(favourite.count),0) + [Container(9000).HasFocus(352) | Control.HasFocus(319)] + Container(9000).Row(0)</visible>
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>319</onleft>
+                <onright>319</onright>
+                <include>MoviesShortcutsCommons</include>
+                <content>
+                    <item id="0" description="Movies">
+                        <visible>Player.HasVideo + IsEmpty(Player.Art(tvshow.poster))</visible>
+                        <label>$INFO[VideoPlayer.Title]</label>
+                        <thumb>$INFO[VideoPlayer.Cover]</thumb>
+                        <onclick>fullscreen</onclick>
+                    </item>
+                    <item id="0" description="Movies">
+                        <visible>Player.HasVideo + !IsEmpty(Player.Art(tvshow.poster))</visible>
+                        <label>$INFO[VideoPlayer.Title]</label>
+                        <thumb>$INFO[Player.Art(tvshow.poster)]</thumb>
+                        <onclick>fullscreen</onclick>
+                    </item>
+                    <item id="1" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),0)</visible>
+                        <label>$INFO[Window.Property(favourite.1.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.1.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.1.path)]</onclick>
+                    </item>
+                    <item id="2" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),1)</visible>
+                        <label>$INFO[Window.Property(favourite.2.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.2.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.2.path)]</onclick>
+                    </item>
+                    <item id="3" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),2)</visible>
+                        <label>$INFO[Window.Property(favourite.3.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.3.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.3.path)]</onclick>
+                    </item>
+                    <item id="4" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),3)</visible>
+                        <label>$INFO[Window.Property(favourite.4.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.4.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.4.path)]</onclick>
+                    </item>
+                    <item id="5" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),4)</visible>
+                        <label>$INFO[Window.Property(favourite.5.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.5.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.5.path)]</onclick>
+                    </item>
+                    <item id="6" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),5)</visible>
+                        <label>$INFO[Window.Property(favourite.6.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.6.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.6.path)]</onclick>
+                    </item>
+                    <item id="7" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),6)</visible>
+                        <label>$INFO[Window.Property(favourite.7.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.7.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.7.path)]</onclick>
+                    </item>
+                    <item id="8" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),7)</visible>
+                        <label>$INFO[Window.Property(favourite.8.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.8.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.8.path)]</onclick>
+                    </item>
+                    <item id="9" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),8)</visible>
+                        <label>$INFO[Window.Property(favourite.9.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.9.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.9.path)]</onclick>
+                    </item>
+                    <item id="10" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),9)</visible>
+                        <label>$INFO[Window.Property(favourite.10.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.10.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.10.path)]</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <visible>Control.HasFocus(319)</visible>
+                <left>80</left>
+                <top>104</top>
+                <width>284</width>
+                <height>408</height>
+                <texture border="10=">images/SliderWL.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" time="220">VisibleChange</animation>
+                <animation condition="Container(319).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(319).Position(1)" effect="slide" start="0,0" end="295,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(319).Position(2)" effect="slide" start="0,0" end="590,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(319).Position(3)" effect="slide" start="0,0" end="885,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(319).Position(4)" effect="slide" start="0,0" end="1180,0" time="220" easing="inout" reversible="true">Conditional</animation>
+                <animation condition="Container(319).Position(5)" effect="slide" start="0,0" end="1475,0" time="220" easing="inout" reversible="true">Conditional</animation>
+            </control>
+        </control>
+    </include>
+</includes>
