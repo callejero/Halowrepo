@@ -178,6 +178,31 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.viaplay"
+       name="Viaplay"
+       version="2.1.1"
+       provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>sv</language>
+    <summary lang="en">Watch content from Viaplay.</summary>
+    <summary lang="sv">Titta på innehåll från Viaplay.</summary>
+	<summary lang="dk">Se indhold fra Viaplay.</summary>
+    <description lang="en">With this addon you can stream content from Viaplay.</description>
+    <description lang="sv">Med denna addon kan du strömma innehåll från Viaplay.</description>
+	<description lang="dk">Med denne addon du kan streame indhold fra Viaplay.</description>
+	<description lang="no">Med denne addon kan du streame innhold fra Viaplay.</description>
+	<description lang="fi">Tämän addon voit suoratoistaa sisältöä Viaplay.</description>
+    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <platform>windx wingl osx linux</platform>
+  </extension>
+</addon>
+
 <addon id="repository.Halowrepo" name="  [COLOR lime][B]HALOW [/COLOR][COLOR white]Repository[/B][/COLOR]" version="1.6.0" provider-name="HalowRepo">
 	<extension point="xbmc.addon.repository" name="  [COLOR lime][B]Halow[/COLOR][COLOR white]Repository[/B][/COLOR]">
         <info compressed="false">https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml</info>
@@ -500,31 +525,6 @@
     <description lang="it">Se ti piace la politica di Apple per le interfacce grafiche "tutto a portata di mano", allora dovresti provare questa Skin. L'ho progettata cercando di mettere il minor numero di click tra te e quello che stai cercando di fare (o di guardare ;) ).[CR]Grazie a Pecinko per Quartz come solida base di partenza.[CR] Grazie ai testers e agli ispiratori:.. Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
 
     <disclaimer>SiO2 - Enjoy</disclaimer>
-  </extension>
-</addon>
-
-<addon id="plugin.video.viaplay"
-       name="Viaplay"
-       version="2.1.1"
-       provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <language>sv</language>
-    <summary lang="en">Watch content from Viaplay.</summary>
-    <summary lang="sv">Titta på innehåll från Viaplay.</summary>
-	<summary lang="dk">Se indhold fra Viaplay.</summary>
-    <description lang="en">With this addon you can stream content from Viaplay.</description>
-    <description lang="sv">Med denna addon kan du strömma innehåll från Viaplay.</description>
-	<description lang="dk">Med denne addon du kan streame indhold fra Viaplay.</description>
-	<description lang="no">Med denne addon kan du streame innhold fra Viaplay.</description>
-	<description lang="fi">Tämän addon voit suoratoistaa sisältöä Viaplay.</description>
-    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-    <platform>windx wingl osx linux</platform>
   </extension>
 </addon>
 
