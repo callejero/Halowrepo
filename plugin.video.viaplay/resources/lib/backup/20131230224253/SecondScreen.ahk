@@ -1,3 +1,0 @@
-
-
-WinWaitActive, http://viaplay
