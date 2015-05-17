@@ -91,6 +91,7 @@ def Categories():
     AddDir("[COLOR yellow][B]BIG FIGHT HD[/B][/COLOR]", Raw+"UDsVvUV4" ,4 ,"http://cdnimages2.abs-cbnnews.com/microsites/pacquiao-punch/041015-shareable.jpg")
     AddDir("[COLOR red][B]TV Series[/B][/COLOR]",'TV',45 ,"http://fc09.deviantart.net/fs70/i/2013/002/d/a/tv_series_folder_icons_pack_2_by_atti12-d5q5h7z.png") 	
     AddDir("[COLOR yellow][B]Cartoon [/B][/COLOR]", Raw+"a44ww8ni" ,4 ,"http://forums.windowscentral.com/attachments/app-spotlight/61347d1396600938t-tomjerry_icon.png")
+    AddDir("[COLOR blue][B]Streamax TV [/B][/COLOR]", Raw+"vVgyFj2V" ,4 ,"http://streamax.tv/wp-content/uploads/2015/05/Streamax_Q4_2.png")
 
     xbmc.executebuiltin("Container.SetViewMode(50)") 
    
