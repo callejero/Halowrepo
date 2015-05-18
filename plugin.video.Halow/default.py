@@ -89,7 +89,7 @@ def Categories():
     AddDir("[COLOR green][B]SPORT  LIVE TV[/B][/COLOR]", Raw+"MqqxxXaT" ,4 ,"http://themetoday.com/wp-content/uploads/2010/01/Various-Sport_Icons.jpg")
     AddDir("[COLOR blue][B]Football Replays[/B][/COLOR]", "REPLAYS" ,150 ,"http://3.bp.blogspot.com/-a3BcIcfxTTw/VO7-K7t9tgI/AAAAAAAAKdA/_yDy5iOo7sE/s1600/FOOTBALL%2BREPLAYS.PNG")    
     AddDir("[COLOR yellow][B]BIG FIGHT HD[/B][/COLOR]", Raw+"UDsVvUV4" ,4 ,"http://cdnimages2.abs-cbnnews.com/microsites/pacquiao-punch/041015-shareable.jpg")
-    AddDir("[COLOR red][B]TV Series[/B][/COLOR]",'TV',45 ,"http://fc09.deviantart.net/fs70/i/2013/002/d/a/tv_series_folder_icons_pack_2_by_atti12-d5q5h7z.png") 	
+    AddDir("[COLOR red][B]MOVIES & SERIES[/B][/COLOR]",'TV',45 ,"http://fc09.deviantart.net/fs70/i/2013/002/d/a/tv_series_folder_icons_pack_2_by_atti12-d5q5h7z.png") 	
     AddDir("[COLOR yellow][B]Cartoon [/B][/COLOR]", Raw+"a44ww8ni" ,4 ,"http://forums.windowscentral.com/attachments/app-spotlight/61347d1396600938t-tomjerry_icon.png")
     AddDir("[COLOR blue][B]Streamax TV [/B][/COLOR]", Raw+"vVgyFj2V" ,4 ,"http://streamax.tv/wp-content/uploads/2015/05/Streamax_Q4_2.png")
 
@@ -152,6 +152,14 @@ def MOVIES():
         xbmc.executebuiltin("Container.SetViewMode(500)") 
         
 def TV():
+        AddDir('[COLOR blue][B]Featured[/B][/COLOR]',custurl1+'featured-movies/',52,"http://www.mrcolionnoir.com/wp-content/uploads/2013/08/Featured.png")
+        AddDir('[COLOR blue][B]New Releases[/B][/COLOR]',custurl1+'new-releases/',52,"http://www.presentation-process.com/images/New-icon.gif")
+        AddDir('[COLOR blue][B]Latest Added[/B][/COLOR]',custurl1+'latest-added/',52,"http://comps.canstockphoto.com/can-stock-photo_csp16348546.jpg")
+        AddDir('[COLOR blue][B]HD[/B][/COLOR]',custurl1+'latest-hd-movies/',52,"http://s5.postimg.org/pwa1iwsiv/image.png")
+        AddDir('[COLOR blue][B]Most Viewed[/B][/COLOR]',custurl1+'most-viewed/',52,"https://www.colourbox.com/preview/10743341-most-viewed-sign-icon-most-watched-symbol.jpg")
+        AddDir('[COLOR blue][B]Search movies[/B][/COLOR]',custurl1+'most-viewed/',79,"http://c.dryicons.com/images/icon_sets/shine_icon_set/png/256x256/movie_search.png")
+        AddDir('[COLOR blue][B]TRAILERS[/B][/COLOR]','movieclipsTRAILERS',11,"http://i292.photobucket.com/albums/mm16/kiwijunglist/category/th_Trailers.png")
+
         AddDir('[COLOR red]Newest Episodes [/COLOR]',custurltv+'new-episodes/',77,'http://www.allchilliwackrealestate.com/wp-content/uploads/2014/04/new_icon.jpg')
         AddDir('[COLOR red]Latest Added[/COLOR]',custurltv+'latest-added/',75,'http://blog.bansaltestprep.com/wp-content/uploads/2012/09/latest_icon_2_by_tiennythe-d2zo547.jpg')
         AddDir('[COLOR red]Search[/COLOR]',custurltv,78,'http://www.tutorialsscripts.com/free-icons/search-icons/purple-search-icon-256-x-256.jpg')
