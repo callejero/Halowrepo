@@ -90,6 +90,7 @@ def main():
     add_video_item('rtmp://live2.karwan.tv/civan-tv//civan-tv.stream'								,{ 'title': 'Civan TV ZINDÎ'}, icons + 'civan-tv.png')
     add_video_item('rtmp://live1.karwan.tv/falcon-eye-tv/<playpath>falcon-eye-tv.stream'				,{ 'title': 'Falcon Eye TV'}, icons + 'falcon-eye-tv.png')
     add_video_item('rtmp://live1.karwan.tv/cihan-tv/cihan-tv.stream'                                                    ,{ 'title': 'Cihan TV'}, icons + 'cihan-tv')
+    add_video_item('rtmp://live.karwan.tv/azadi-tv//azadi-tv.stream'                                                    ,{ 'title': 'Azadi TV TV'}, icons + 'azadi-tv')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
