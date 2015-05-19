@@ -713,27 +713,29 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.phstreams" name="Phoenix" version="2.0.0" provider-name="Blazetamer, lambda">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.pyxbmct" version="1.1.4" />
-		<import addon="script.common.plugin.cache" version="2.5.2"/>
-		<import addon="script.module.metahandler" version="2.3.1" />
-		<import addon="script.module.requests" version="1.1.0"/>
-		<import addon="script.module.simplejson" optional="true"/>
-		<import addon="script.module.parsedom" optional="true"/>
-		<import addon="plugin.video.youtube" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Phoenix</summary>
-		<description lang="en">Discover Great Streaming Playlists Exclusive to Kodi, Please visit www.tvaddons.ag for help and support!</description>
-		<platform>all</platform>
-		<forum>http://forums.tvaddons.ag/forums/220-PHOENIX-LIVE-STREAMS</forum>
-		<website>http://www.tvaddons.ag/</website>
-	</extension>
+<addon id="plugin.video.viaplay"
+       name="Viaplay"
+       version="2.0.9"
+       provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>sv</language>
+    <summary lang="en">Watch content from Viaplay.</summary>
+    <summary lang="sv">Titta på innehåll från Viaplay.</summary>
+	<summary lang="dk">Se indhold fra Viaplay.</summary>
+    <description lang="en">With this addon you can stream content from Viaplay.</description>
+    <description lang="sv">Med denna addon kan du strömma innehåll från Viaplay.</description>
+	<description lang="dk">Med denne addon du kan streame indhold fra Viaplay.</description>
+	<description lang="no">Med denne addon kan du streame innhold fra Viaplay.</description>
+	<description lang="fi">Tämän addon voit suoratoistaa sisältöä Viaplay.</description>
+    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <platform>windx wingl osx linux</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.video.shahidmbcnet"
