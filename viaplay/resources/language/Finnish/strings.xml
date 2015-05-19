@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="4001">Yleistä</string>
+	<string id="4002">Käyttäjätunnus</string>
+	<string id="4003">salasana</string>
+	<string id="4004">Platform</string>
+	<string id="4005">Windows</string>
+	<string id="4006">Linux</string>
+	<string id="4007">Mac / OSX</string>
+	<string id="4008">Tämä lisäosa toimii vain Windows.</string>
+	<string id="4009">Tärkeää tietoa</string>
+	<string id="4010">Sinun täytyy syöttää käyttäjätietoja Viaplay.</string>
+	<string id="4011">Sinun täytyy käynnistää uudelleen XBMC ennen kuin voit käyttää Viaplay add-on.</string>
+	<string id="4012">Maa</string>
+	<string id="4013">Ruotsi</string>
+	<string id="4014">Tanska</string>
+	<string id="4015">Movie</string>
+	<string id="4016">​​TV</string>
+	<string id="4017">Urheilu</string>
+	<string id="4018">Asetukset</string>
+	<string id="4019">Lisää suosikkeihin.</string>
+	<string id="4020">Poista Suosikki</string>
+	<string id="4021">Poista suosikeista</string>
+	<string id="4022">Suosikki lisätty.</string>
+	<string id="4023">Norja</string>
+	<string id="4024">Kausi </string>
+	<string id="4025">jaksossa </string>
+	<string id="4026">Suomi</string>
+	<string id="4027">Saat tietoa TV-sarja theTvDB.com</string>
+	<string id="4028">Lapsille</string>
+	<string id="4029">Järjestä TV-ohjelmia ja elokuvia perustuu kun niitä lisättiin</string>
+	<string id="4030">Käytä sisäinen toisto</string>
+	<string id="4031">Sisäinen toisto</string>
+	<string id="4032">Käytä tekstitykset</string>
+	<string id="4033">Kanavat</string>
+	<string id="4034">Maanantai</string>
+	<string id="4035">Tiistai</string>
+	<string id="4036">Keskiviikko</string>
+	<string id="4037">Torstai</string>
+	<string id="4038">Perjantai</string>
+	<string id="4039">Lauantai</string>
+	<string id="4040">Sunnuntai</string>
+
+	<string id="4041">Merkitse esitetty</string>
+	<string id="4042">Mark ei esitetty</string>
+
+	<string id="4043">Oma suosikki</string>
+	<string id="4044">poista tähti</string>
+	<string id="4045">On uudempi versio Viaplay addon</string>
+	<string id="4046">URL palasi 404, toisto ei voi jatkua.</string>
+	<string id="4047">Katsotut</string>
+	<string id="4048">Oma suosikki</string>
+	<string id="4049">Parental Controls</string>
+	<string id="4050">Käytä Parental Controls</string>
+	<string id="4051">PIN-koodi</string>
+	<string id="4052">Annettu PIN-koodi on väärä.</string>
+	<string id="4053">Sisältö on suojattu vanhempien ohjaus, syötä pin-koodi:</string>
+	<string id="4054">Ikäraja erotiikalle</string>
+	<string id="4055">Tämä osasto sisältää seksuaalista aineistoa, </string>
+	<string id="4056">oletko yli 18-vuotias?</string>
+	<string id="4057">Kyllä, olen yli 18-vuotias</string>
+	<string id="4058">En, olen alle 18-vuotias</string>
+	<string id="4059">Tarkista uuden version käynnistyksen</string>
+</strings>
