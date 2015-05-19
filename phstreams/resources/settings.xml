@@ -1,0 +1,15 @@
+<settings>
+	<category label="Accounts">
+		<setting type="lsep" label="Movreel"/>
+		<setting id="movreel_user" type="text" label="Username" default=""/>
+		<setting id="movreel_password" type="text" option="hidden" label="Password" default=""/>
+	</category>
+
+	<category label="MetaData">
+		<setting id="meta" type="bool" label="Enable MetaData" default="false"/>
+	</category>
+
+	<category label="Downloads">
+		<setting id="download_folder" type="folder" label="Downloads Folder" default="" />
+	</category>
+</settings>
