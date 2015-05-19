@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.viaplay"
+<addon id="[COLOR red]plugin.video.viaplay[/COLOR]"
        name="Viaplay"
-       version="2.0.9"
+       version="2.1.1"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
