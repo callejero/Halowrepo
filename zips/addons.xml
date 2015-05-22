@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="metadata.albums.naver.com"
-       name="Naver Music"
-       version="1.1.2"
-       provider-name="XBMC-Korea">
-  <requires>
-    <import addon="xbmc.metadata" version="1.0"/>
-  </requires>
-  <extension point="xbmc.metadata.scraper.albums"
-             language="ko"
-             library="naver-albums.xml"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">NAVER Music Albums Scraper</summary>
-    <summary lang="ko">네이버 음악앨범 스크래퍼</summary>
-    <summary lang="hu">NAVER Album scraper</summary>
-    <summary lang="pt">Scraper de música NAVER</summary>
-    <description lang="en">Download music album information from music.naver.com</description>
-    <description lang="ko">music.naver.com 에서 음악앨범 정보 다운로드</description>
-    <description lang="hu">Zene információk letöltése a music.naver.com webhelyről</description>
-    <description lang="pt">Descarregar informação de música de music.naver.com</description>
-  </extension>
-</addon>
-
 <addon id="plugin.audio.radio_de" name="Radio" version="2.3.1" provider-name="Tristan Fischer (sphere@dersphere.de)">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -110,26 +88,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.glwiz"
-       name="GLWiZ"
-       version="1.1.3"
-       provider-name="babak">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>GLWiZ</summary>
-    <description>GLWiZ Addon for XBMC</description>
-    <platform>all</platform>
-    <language>fa az hy tr</language>
-  </extension>
-</addon>
-
 <addon id="plugin.video.Halow" name="[COLOR red]HALOW [COLOR green] LIVE[/COLOR]" version="4.19" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -173,57 +131,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.audio.sverigesradio"
-       name="Sveriges Radio"
-       version="1.0.4"
-       provider-name="Daniel">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Sveriges Radio</summary>
-        <description lang="en">Listen to Sveriges Radio</description>
-        <description lang="sv">Lyssna på Sveriges Radio</description>
-        <disclaimer lang="en">This addon uses Sveriges Radio's official API. It may or may not work outside of Sweden, and there is mainly content in Swedish.</disclaimer>
-        <language>sv</language>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <forum>http://forum.kodi.tv/showthread.php?tid=116735</forum>
-        <website>https://github.com/dodoadoodoo/kodi-sverigesradio</website>
-        <source>https://github.com/dodoadoodoo/kodi-sverigesradio</source>
-        <email></email>
-    </extension>
-</addon>
-
-<addon id="plugin.video.svtplay"
-       name="SVT Play"
-       version="4.0.16"
-       provider-name="nilzen">
-  <requires>
-    <import addon="script.module.parsedom" version="1.2.0"/>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <language>sv</language>
-    <summary lang="en">Watch content from SVT Play.</summary>
-    <summary lang="sv">Titta på innehåll från SVT Play.</summary>
-    <description lang="en">With this addon you can stream content from SVT Play (svtplay.se).</description>
-    <description lang="sv">Med denna addon kan du strömma innehåll från SVT Play (svtplay.se).</description>
-    <disclaimer>This is an unofficial addon and it is not supported or maintained by SVT. Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-    <platform>all</platform>
-    <license> GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <website>https://github.com/nilzen/xbmc-svtplay</website>
-    <source>https://github.com/nilzen/xbmc-svtplay</source>
-    <forum>http://forum.xbmc.org/showthread.php?tid=67110</forum>
-  </extension>
-</addon>
-
 <addon id="plugin.video.swefilmer"
        name="SweFilmer"
        version="1.17"
@@ -242,31 +149,6 @@
     <platform>all</platform>
     <website></website>
     <source></source>
-  </extension>
-</addon>
-
-<addon id="[COLOR red]plugin.video.viaplay[/COLOR]"
-       name="Viaplay"
-       version="2.1.1"
-       provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <language>sv</language>
-    <summary lang="en">Watch content from Viaplay.</summary>
-    <summary lang="sv">Titta på innehåll från Viaplay.</summary>
-	<summary lang="dk">Se indhold fra Viaplay.</summary>
-    <description lang="en">With this addon you can stream content from Viaplay.</description>
-    <description lang="sv">Med denna addon kan du strömma innehåll från Viaplay.</description>
-	<description lang="dk">Med denne addon du kan streame indhold fra Viaplay.</description>
-	<description lang="no">Med denne addon kan du streame innhold fra Viaplay.</description>
-	<description lang="fi">Tämän addon voit suoratoistaa sisältöä Viaplay.</description>
-    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-    <platform>windx wingl osx linux</platform>
   </extension>
 </addon>
 
@@ -700,6 +582,32 @@
     <description lang="it">Se ti piace la politica di Apple per le interfacce grafiche "tutto a portata di mano", allora dovresti provare questa Skin. L'ho progettata cercando di mettere il minor numero di click tra te e quello che stai cercando di fare (o di guardare ;) ).[CR]Grazie a Pecinko per Quartz come solida base di partenza.[CR] Grazie ai testers e agli ispiratori:.. Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
 
     <disclaimer>SiO2 - Enjoy</disclaimer>
+  </extension>
+</addon>
+
+<addon id="plugin.video.svtplay"
+       name="SVT Play"
+       version="4.0.17"
+       provider-name="nilzen">
+  <requires>
+    <import addon="script.module.parsedom" version="1.2.0"/>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>sv</language>
+    <summary lang="en">Watch content from SVT Play.</summary>
+    <summary lang="sv">Titta på innehåll från SVT Play.</summary>
+    <description lang="en">With this addon you can stream content from SVT Play (svtplay.se).</description>
+    <description lang="sv">Med denna addon kan du strömma innehåll från SVT Play (svtplay.se).</description>
+    <disclaimer>This is an unofficial addon and it is not supported or maintained by SVT. Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <platform>all</platform>
+    <license> GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <website>https://github.com/nilzen/xbmc-svtplay</website>
+    <source>https://github.com/nilzen/xbmc-svtplay</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=67110</forum>
   </extension>
 </addon>
 
