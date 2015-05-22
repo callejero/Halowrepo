@@ -111,6 +111,27 @@
   </extension>
 </addon>
 
+<addon id="script.simpleplaylists"
+       name="SimplePlaylists"
+       version="1.1.1"
+       provider-name="AddonScriptorDE">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+    <provides>video audio image</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+      <summary lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</summary>
+      <summary lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</summary>
+      <language></language>
+      <description lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</description>
+      <description lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="script.navi-x"
        name="Navi-X"
        version="4.0"
@@ -760,25 +781,6 @@
         <website>http://tommy.winther.nu</website>
         <email>tommy@winther.nu</email>
         <source>https://github.com/twinther/script.tvguide</source>
-    </extension>
-</addon>
-
-<addon id="service.watchdog" name="Watchdog" version="0.9.5" provider-name="takoi">
-    <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
-    </requires>
-    <extension point="xbmc.service" library="service.py" start="login"/>
-    <extension point="xbmc.python.script" library="script.py"/>
-    <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-        <language/>
-        <summary lang="en">Keep library synced with file system</summary>
-        <summary lang="fr">Maintient les médiathèques synchonisée avec le système de fichiers</summary>
-        <description lang="en">This service will automatically update the video and music library when new files are added or removed from a media source. Update is instant.</description>
-        <description lang="fr">Ce service met automatiquement à jour les médiathèques vidéo et musique lorsque des nouveaux fichiers sont ajoutés ou supprimés d'une source. La mise à jour est instantannée.</description>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum>http://forum.xbmc.org/showthread.php?tid=128896</forum>
-        <source>https://github.com/takoi/xbmc-addon-watchdog</source>
     </extension>
 </addon>
 
