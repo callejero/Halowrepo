@@ -151,27 +151,6 @@
   </extension>
 </addon>
 
-<addon
-  id="plugin.video.SportsDevil"
-  version="1.8.5.7"
-  name="SportsDevil"
-  provider-name="MaxMustermann">
-  <requires>
-   <import addon="xbmc.python" version="2.0"/>
-   <import addon="script.common.plugin.cache" version="0.9.1"/>
-  </requires>
-  <extension
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Play videos of different sports streaming sites</summary>
-    <description>Play videos of different sports streaming sites</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.svtplay"
        name="SVT Play"
        version="4.0.16"
@@ -649,6 +628,27 @@
     <description lang="it">Se ti piace la politica di Apple per le interfacce grafiche "tutto a portata di mano", allora dovresti provare questa Skin. L'ho progettata cercando di mettere il minor numero di click tra te e quello che stai cercando di fare (o di guardare ;) ).[CR]Grazie a Pecinko per Quartz come solida base di partenza.[CR] Grazie ai testers e agli ispiratori:.. Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
 
     <disclaimer>SiO2 - Enjoy</disclaimer>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="1.8.5.7"
+  name="SportsDevil"
+  provider-name="MaxMustermann">
+  <requires>
+   <import addon="xbmc.python" version="2.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
