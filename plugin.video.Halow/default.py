@@ -148,6 +148,7 @@ def MOVIES():
         AddDir("[COLOR green][B]Africa LIVE TV[/B][/COLOR]", Raw+"2aYeNhfC" ,4 ,"http://www.freeiptvlinks.com/wp-content/uploads/2015/04/Flag_of_South_Africa.svg_-304x200.png")
         AddDir("[COLOR green][B]Macedonia LIVE TV[/B][/COLOR]", Raw+"v1mxrzHF" ,4 ,"http://img.freeflagicons.com/thumb/glossy_square_icon/macedonia/macedonia_640.png")
         AddDir("[COLOR green][B]Bangladesh LIVE TV[/B][/COLOR]", Raw+"dH2PZY5B" ,4 ,"http://www.fancyicons.com/free-icons/103/flags/png/256/bangladesh_flag_256.png")
+        AddDir("[COLOR green][B]Czech LIVE TV[/B][/COLOR]", Raw+"M84yYRHe" ,4 ,"http://img.freeflagicons.com/thumb/square_icon/czech_republic/czech_republic_640.png")
 
         xbmc.executebuiltin("Container.SetViewMode(500)") 
         
