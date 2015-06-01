@@ -100,7 +100,7 @@ def MOVIES():
         AddDir("[COLOR green][B]KURDISH LIVE TV[/B][/COLOR]", Raw+"aUP8WWAd" ,4 ,"https://lh3.googleusercontent.com/-Frj2oKQyGVk/AAAAAAAAAAI/AAAAAAAAABI/A4ILF4cV2x0/photo.jpg")
         AddDir("[COLOR green][B]Arabic LIVE TV[/B][/COLOR]", Raw+"AH2EUHYY" ,4 ,"http://www.tamddon.com/wp-content/uploads/2014/02/%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86.jpg")
         AddDir("[COLOR green][B]TURKISH LIVE TV[/B][/COLOR]", Raw+"8skLzEsU" ,4 ,"http://img.freeflagicons.com/thumb/football_icon/turkey/turkey_640.png")
-        AddDir("[COLOR green][B]IRAN LIVE TV[/B][/COLOR]", Raw+"53bw3hGb" ,4 ,"http://icons.iconarchive.com/icons/hopstarter/flag-borderless/256/Iran-icon.png")
+        AddDir("[COLOR green][B]IRAN LIVE TV[/B][/COLOR]", Raw+"53bw3hGb" ,4 ,"https://ton.twitter.com/i/ton/data/dm/605494391797481472/605494391835230209/Kmfuhn2a.png")
         AddDir("[COLOR green][B]Afghanistan LIVE TV[/B][/COLOR]", Raw+"P9HK1Ynp" ,4 ,"http://icons.iconarchive.com/icons/hopstarter/flag-borderless/256/Afghanistan-icon.png")
         AddDir("[COLOR green][B]SWEDISH LIVE TV[/B][/COLOR]", Raw+"kbxNEVpZ" ,4 ,"http://www.iconarchive.com/download/i65935/hopstarter/flag-borderless/Sweden.ico")
         AddDir("[COLOR green][B]Norway LIVE TV[/B][/COLOR]", Raw+"LHbyudcT" ,4 ,"http://icons.iconarchive.com/icons/custom-icon-design/flag/256/Norway-Flag-icon.png")
