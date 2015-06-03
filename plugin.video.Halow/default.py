@@ -77,7 +77,7 @@ if  not (os.path.isfile(favoritesFile)):
 def Categories():
     Version = '[COLOR yellow][B]*FAILED TO CONNECT*[/B][/COLOR]'
     try: Version = net.http_GET(Raw+'1FkZ9aMD').content
-    except: AddDir("[COLOR red][B] BAD CONNECTION [/B][/COLOR]", "Update" ,98, "")
+    except: AddDir("FB---> Halow TV Add-ons [COLOR red][B][/B][/COLOR]", "Update" ,98, "http://rmkm.org.in/custom/facebook-logo.jpg")
 
     if Version != aaastreamdate and Version != '[COLOR yellow][B]*FAILED TO CONNECT*[/B][/COLOR]':
            UpdateMe()

@@ -88,7 +88,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.Halow" name="[COLOR red]HALOW [COLOR green] LIVE[/COLOR]" version="4.22" provider-name="Halow">
+<addon id="plugin.video.Halow" name="[COLOR red]HALOW [COLOR green] LIVE[/COLOR]" version="4.23" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -112,6 +112,26 @@
     <description lang="en">[COLOR red]Free Halow TV Live is free for all containing different live channels from different countries free for the whole world FB_>  Halow TV ADD_ONS twitter_> @HalowTV.[/COLOR]</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.hubwizard" version="1.1.9"
+	name="Config Wizard" provider-name="tvaddons.ag">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.addon.common" optional="true" />
+		<import addon="script.module.t0mm0.common" optional="true" />
+		<import addon="script.module.urlresolver" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Config Wizard</summary>
+		<description>Instantly configure your Kodi experience with all the best add-ons and goodies from the TVADDONS.AG community!  </description>
+		<platform>all</platform>
+		<forum>http://forums.tvaddons.ag/forums/106-CONFIG-WIZARD</forum>
+		<website>http://www.tvaddons.ag/</website>
+	</extension>
 </addon>
 
 <addon id="plugin.video.kurd" name="[COLOR red]Karwan.[COLOR green]TV[/COLOR]" version="1.1.8" provider-name="Halow">
@@ -611,26 +631,6 @@
     <source>https://github.com/nilzen/xbmc-svtplay</source>
     <forum>http://forum.xbmc.org/showthread.php?tid=67110</forum>
   </extension>
-</addon>
-
-<addon id="plugin.video.hubwizard" version="1.1.9"
-	name="Config Wizard" provider-name="tvaddons.ag">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.addon.common" optional="true" />
-		<import addon="script.module.t0mm0.common" optional="true" />
-		<import addon="script.module.urlresolver" optional="true" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Config Wizard</summary>
-		<description>Instantly configure your Kodi experience with all the best add-ons and goodies from the TVADDONS.AG community!  </description>
-		<platform>all</platform>
-		<forum>http://forums.tvaddons.ag/forums/106-CONFIG-WIZARD</forum>
-		<website>http://www.tvaddons.ag/</website>
-	</extension>
 </addon>
 
 <addon id="weather.yahoo" name="Yahoo! Weather" version="3.0.6" provider-name="ronie">
