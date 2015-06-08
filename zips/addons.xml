@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon  id="net.rieter.xot"
+        version="4.0.0"
+        name="Retrospect"
+        provider-name="Bas Rieter">
+
+    <requires>
+        <import addon="xbmc.metadata" version="1.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+    </requires>
+
+    <extension  point="xbmc.python.pluginsource"
+                library="default.py"
+                id="net.rieter.xot.plugin">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <minversion>29000</minversion>
+        <summary>Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
+        <description>Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
+        <disclaimer>Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
+        <nofanart>true</nofanart>
+        <language></language>
+    </extension>
+</addon>
+
 <addon id="plugin.audio.radio_de" name="Radio" version="2.3.1" provider-name="Tristan Fischer (sphere@dersphere.de)">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -68,6 +96,31 @@
         <description lang="sv">Musiktillägg som ger åtkomst till över 7000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, svensk och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
         <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 7000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
         <description lang="zh">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
+    </extension>
+</addon>
+
+<addon id="plugin.audio.sverigesradio"
+       name="Sveriges Radio"
+       version="1.0.4"
+       provider-name="Daniel">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Sveriges Radio</summary>
+        <description lang="en">Listen to Sveriges Radio</description>
+        <description lang="sv">Lyssna på Sveriges Radio</description>
+        <disclaimer lang="en">This addon uses Sveriges Radio's official API. It may or may not work outside of Sweden, and there is mainly content in Swedish.</disclaimer>
+        <language>sv</language>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=116735</forum>
+        <website>https://github.com/dodoadoodoo/kodi-sverigesradio</website>
+        <source>https://github.com/dodoadoodoo/kodi-sverigesradio</source>
+        <email></email>
     </extension>
 </addon>
 
@@ -631,31 +684,6 @@
     <source>https://github.com/nilzen/xbmc-svtplay</source>
     <forum>http://forum.xbmc.org/showthread.php?tid=67110</forum>
   </extension>
-</addon>
-
-<addon id="plugin.audio.sverigesradio"
-       name="Sveriges Radio"
-       version="1.0.4"
-       provider-name="Daniel">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Sveriges Radio</summary>
-        <description lang="en">Listen to Sveriges Radio</description>
-        <description lang="sv">Lyssna på Sveriges Radio</description>
-        <disclaimer lang="en">This addon uses Sveriges Radio's official API. It may or may not work outside of Sweden, and there is mainly content in Swedish.</disclaimer>
-        <language>sv</language>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <forum>http://forum.kodi.tv/showthread.php?tid=116735</forum>
-        <website>https://github.com/dodoadoodoo/kodi-sverigesradio</website>
-        <source>https://github.com/dodoadoodoo/kodi-sverigesradio</source>
-        <email></email>
-    </extension>
 </addon>
 
 <addon id="weather.yahoo" name="Yahoo! Weather" version="3.0.6" provider-name="ronie">
