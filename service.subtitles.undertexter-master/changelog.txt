@@ -1,0 +1,38 @@
+2.0.0
+	- Fixed issue with subtitles in subfolders inside archives
+	- Fixed searching for English TV-show subtitles
+	- Moved all the code into a single file and restructured it
+	- Added background to logo.png
+	- Removed unused translation files (for now)
+	- And some other various changes...
+
+1.2.2
+	- Code cleanup
+	- Updated string ID's in strings.po files
+	- Added support for preferred language
+	- Updated icon.png and logo.png
+
+1.2.1
+	- Decode parsed result & improved subtitle sorting
+	- Added basic exception handling
+
+1.2.0
+	- Rewrote parts of the add-on & tweaked subtitle sorting: Synced subtitles will now appear on top of the list
+
+1.1.1
+	- Tweaking searching for TV-shows
+	- Added basic sync check
+	- Decode HTML entities in search results
+
+1.1.0
+	- Code cleanup & added support for English subtitles
+
+1.0.1
+	- Fixed addon.xml
+	- Changed folder structure
+	- Added proper debug logging
+	- Some minor fixes
+	- Fixed indentation: Now using spaces instead of tabs
+
+1.0.0
+	- Initial release

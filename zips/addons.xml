@@ -250,25 +250,6 @@
   </extension>
 </addon>
 
-<addon id="repository.bbtsip.tv" name="[COLOR yellowgreen]B[/COLOR][COLOR dodgerblue]B[/COLOR]T[COLOR orangered]S[/COLOR] - Repo" version="0.0.4" provider-name="BBTS">
-<requires>
-    <import addon="xbmc.addon" version="12.0.0" />
-</requires>
-        <extension point="xbmc.addon.repository" name="BBTS Repo">
-                <info compressed="false">http://repository.bbtsip.tv/repo/addons.xml</info>
-                <checksum>http://repository.bbtsip.tv/repo/addons.xml.md5</checksum>
-                <datadir zip="true">http://repository.bbtsip.tv/repo/addons/</datadir>
-                <hashes>true</hashes>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-                <summary>The BBTS Repository</summary>
-                <description>Download and install add-ons from the BBTS Repository, Plugin by @koderdude.</description>
-                <disclaimer>The repository is maintained by the BBTS community and our generator fetches addons from multiple sources. Therefore BBTS accepts no responsibility for included addons,straems or midia.</disclaimer>
-                <platform>all</platform>
-                <website>http://www.bbtsip.tv/</website>
-        </extension>
-</addon>
-
 <addon id="repository.Halowrepo" name="  [COLOR lime][B]HALOW [/COLOR][COLOR white]Repository[/B][/COLOR]" version="1.6.0" provider-name="HalowRepo">
 	<extension point="xbmc.addon.repository" name="  [COLOR lime][B]Halow[/COLOR][COLOR white]Repository[/B][/COLOR]">
         <info compressed="false">https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml</info>
@@ -558,6 +539,26 @@
     <forum>http://forum.xbmc.org/showthread.php?tid=129499</forum>
     <source>https://github.com/robweber/xbmcbackup</source>
   </extension>
+</addon>
+
+<addon id="service.subtitles.undertexter" name="Undertexter.se" version="2.0.1" provider-name="xit">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.subtitle.module" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Undertexter.se</summary>
+		<description lang="en">Search and download Swedish and English subtitles from Undertexter.se.[CR][CR][B]Note:[/B] Make sure you add desired languages to your subtitle settings (Languages to download subtitles for).</description>
+		<description lang="sv">Sök och ladda ner svenska och engelska undertexter från Undertexter.se.[CR][CR][B]Notis:[/B] Se till att lägga till önskade språk i dina undertextsinställningar (Språk att ladda ner undertexter för).</description>
+		<disclaimer lang="en"></disclaimer>
+		<disclaimer lang="sv"></disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=201638</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/xit/service.subtitles.undertexter</source>
+	</extension>
 </addon>
 
 <addon id="skin.apptv" version="1.0.1" name="AppTV"	provider-name="Wyrm|SamFisher">

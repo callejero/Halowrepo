@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.subtitles.undertexter" name="Undertexter.se" version="2.0.1" provider-name="xit">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.subtitle.module" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Undertexter.se</summary>
+		<description lang="en">Search and download Swedish and English subtitles from Undertexter.se.[CR][CR][B]Note:[/B] Make sure you add desired languages to your subtitle settings (Languages to download subtitles for).</description>
+		<description lang="sv">Sök och ladda ner svenska och engelska undertexter från Undertexter.se.[CR][CR][B]Notis:[/B] Se till att lägga till önskade språk i dina undertextsinställningar (Språk att ladda ner undertexter för).</description>
+		<disclaimer lang="en"></disclaimer>
+		<disclaimer lang="sv"></disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=201638</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/xit/service.subtitles.undertexter</source>   
+	</extension>
+</addon>
