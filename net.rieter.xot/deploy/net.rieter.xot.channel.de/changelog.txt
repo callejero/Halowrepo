@@ -1,2 +1,0 @@
-﻿[B]Changelog[/B]
-Added: SRF.ch (Fixes #597)
