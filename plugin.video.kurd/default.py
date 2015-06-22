@@ -79,7 +79,9 @@ def main():
     add_video_item('http://38.99.146.181:7777/AzadiTV.m3u8'                                                    ,{ 'title': 'Azadi TV TV'}, icons + 'azadi-tv')
     add_video_item('http://cofafrw181.glwiz.com:7777/Badinan.m3u8'                                                    ,{ 'title': 'Badinan Sat TV'}, icons + 'badinan-sat-tv')
     add_video_item('http://cofafrw181.glwiz.com:7777/Jamawar.m3u8'                                                    ,{ 'title': 'Jamawar TV '}, icons + 'jamawar-tv')
-
+    add_video_item('http://origin2.live.web.tv.streamprovider.net/streams/894b55a9a7fa8f9b20da735e2112b034/index.m3u8'                                                    ,{ 'title': 'Havin TV '}, icons + 'havin-tv')
+    add_video_item('http://origin.live.web.tv.streamprovider.net//streams//d9d7ee96913217bbc757f40d4de65c29_live_0_0//index.m3u8'                                                    ,{ 'title': 'Van TV'}, icons + 'van-tv')
+    add_video_item('http://origin.live.web.tv.streamprovider.net//streams//8afa5b0b23429365abd7dbbb4ba22326_live_0_0//index.m3u8'                                                    ,{ 'title': 'HAYAT TV  '}, icons + 'hayat-tv')
 
 
     # add_video_item(''				,{ 'title': ''}, icons + '')
