@@ -52,10 +52,10 @@ def main():
     add_video_item(''		,{ 'title': 'WAAR Sport TV'}, icons + 'waar-sport-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal16/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Ronahi TV'}, icons + 'ronahi-tv.png')
     add_video_item('rtmp://sepidehlive.nanocdn.com:1935/live/sepideh256'					,{ 'title': 'Speda TV'}, icons + 'speda-tv.png')
-    add_video_item('http://198.100.158.231:1935/kanal3/_definst_/livestream/playlist.m3u8'					,{ 'title': 'Cira TV'}, icons + 'cira-tv.png')
+    add_video_item('http://cofafrw181.glwiz.com:7777/Cira.m3u8'					,{ 'title': 'Cira TV'}, icons + 'cira-tv.png')
     add_video_item('rtmp://payamlive.nanocdn.com/live/payam256'					,{ 'title': 'Payam TV'}, icons + 'payam-tv.png')
-    add_video_item('rtmp://84.244.187.12/live/livestream.flv'						,{ 'title': 'KM TV'}, icons + 'kmtv.png')
-    add_video_item('http://198.100.158.231:1935/kanal18/_definst_/livestream/playlist.m3u8'			,{ 'title': 'PELISTANK TV'}, icons + 'pelistank-tv.png')
+    add_video_item('http://cofafrw181.glwiz.com:7777/KurdChannel.m3u8'						,{ 'title': 'KM TV'}, icons + 'kmtv.png')
+    add_video_item('http://cofafrw181.glwiz.com:7777/Pelistank.m3u8'			,{ 'title': 'PELISTANK TV'}, icons + 'pelistank-tv.png')
     add_video_item('http://live.kurdstream.net:1935/liveTrans/Pepule_360p/playlist.m3u8'					,{ 'title': 'KurdMax Pepule TV'}, icons + 'kurdmax-tv.png')
     add_video_item('http://balgurup.garantisistem.com:1935/Super_Tv/Super_Tv/playlist.m3u8'							,{ 'title': 'Super TV'}, icons + 'super-tv.png')
     add_video_item('rtmp://37.77.2.236/liveedge/live'							,{ 'title': 'Halk TV'}, icons + 'halk-tv.png')
@@ -77,6 +77,11 @@ def main():
     add_video_item('rtmp://live1.karwan.tv/falcon-eye-tv1//falcon-eye-tv1.stream'				,{ 'title': 'Falcon Eye TV offlien now'}, icons + 'falcon-eye-tv.png')
     add_video_item('rtmp://kurd-live.com/live/cihan'                                                    ,{ 'title': 'Cihan TV'}, icons + 'cihan-tv')
     add_video_item('http://38.99.146.181:7777/AzadiTV.m3u8'                                                    ,{ 'title': 'Azadi TV TV'}, icons + 'azadi-tv')
+    add_video_item('http://cofafrw181.glwiz.com:7777/Badinan.m3u8'                                                    ,{ 'title': 'Badinan Sat TV'}, icons + 'badinan-sat-tv')
+    add_video_item('http://cofafrw181.glwiz.com:7777/Jamawar.m3u8'                                                    ,{ 'title': 'Jamawar TV '}, icons + 'jamawar-tv')
+
+
+
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
