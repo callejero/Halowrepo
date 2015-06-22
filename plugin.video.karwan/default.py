@@ -12,7 +12,7 @@ def add_video_item(url, infolabels, img=''):
     if 'rtmp://' in url:
         url = url.replace('<playpath>',' playpath=')
         url = url + ' swfUrl=http://p.jwpcdn.com/6/11/jwplayer.flash.swf pageUrl=http://karwan.tv live=1'
-    url = 'plugin://plugin.video.kurd/?playkurd=' + url + '***' + infolabels['title'] + '***' + img
+    url = 'plugin://plugin.video.kurdtv/?playkurd=' + url + '***' + infolabels['title'] + '***' + img
     listitem = xbmcgui.ListItem(infolabels['title'], iconImage=img, thumbnailImage=img)
     listitem.setInfo('video', infolabels)
     listitem.setProperty('IsPlayable', 'false')
@@ -102,16 +102,20 @@ def main():
     add_video_item('http://karwan.tv/live/rega-tv.php'								,{ 'title': 'REGA TV'}, icons + 'rega-tv.png')
     add_video_item('http://karwan.tv/live/rudaw-tv.php'								,{ 'title': 'Rudaw TV English'}, icons + 'rudaw.png')
     add_video_item('http://karwan.tv/live/al-hurria-tv.php'							,{ 'title': 'Al Hurria TV'}, icons + 'al-hurria-tv.png')
-    add_video_item('http://karwan.tv/live/kurdmax-pepule.php'							,{ 'title': 'KurdMax Pepule TV'}, icons + 'kurdmax-tv.png')
+    add_video_item('http://karwan.tv/live/kurdmax-pepule.php'									,{ 'title': 'KurdMax Pepule TV'}, icons + 'kurdmax-tv.png')
     add_video_item('http://karwan.tv/live/super-tv.php'								,{ 'title': 'Super TV'}, icons + 'super-tv.png')
-    add_video_item('http://karwan.tv/live/ozgur-gun-tv.php'							,{ 'title': 'Özgür Gün TV'}, icons + 'ozgur-gun-tv.png')								
-    add_video_item('http://karwan.tv/live/bangawaz-tv.php'							,{ 'title': 'Bangawaz TV'}, icons + 'bangawaz-tv.png')								
-    add_video_item('http://karwan.tv/live/cnn-kurd-tv.php'							,{ 'title': 'CNN KURD TV'}, icons + 'cnn-kurd-tv.png')								
-    add_video_item('http://karwan.tv/live/arin-tv.php'							,{ 'title': 'Arin TV'}, icons + 'arin-tv.png')								
-    add_video_item('http://karwan.tv/live/anb-sat-tv.php'							,{ 'title': 'ANB SAT TV'}, icons + 'anb-sat-tv.png')								
-    add_video_item('http://karwan.tv/live/ishtar-tv.php'							,{ 'title': 'Ishtar TV '}, icons + 'ishtar-tv.png')								
-    add_video_item('http://karwan.tv/live/tv-yek.php'							,{ 'title': 'TV YEK'}, icons + 'tv-yek.png')								
-    add_video_item('http://karwan.tv/live/tv-yek.php'							,{ 'title': 'TV YEK'}, icons + 'tv-yek.png')								
+    add_video_item('http://karwan.tv/live/ozgur-gun-tv.php'								,{ 'title': 'Özgür Gün TV'}, icons + 'ozgur-gun-tv.png')								,{ 'title': 'Super TV'}, icons + 'super-tv.png').png')
+    add_video_item('http://karwan.tv/live/bangawaz-tv.php'								,{ 'title': 'Bangawaz TV'}, icons + 'bangawaz-tv.png')
+    add_video_item('http://karwan.tv/live/cnn-kurd-tv.php'								,{ 'title': 'CNN KURD TV'}, icons + 'cnn-kurd-tv.png')
+    add_video_item('http://karwan.tv/live/carin-tv.php'								,{ 'title': 'Arin TV'}, icons + 'arin-tv.png')
+    add_video_item('http://karwan.tv/live/anb-sat-tv.php'								,{ 'title': 'ANB SAT TV '}, icons + 'anb-sat-tv.png')
+    add_video_item('http://karwan.tv/live/tv-yek.php'								,{ 'title': 'TV YEK '}, icons + 'tv-yek.png')
+    add_video_item('http://karwan.tv/live/arzaq-kurdistan-tv.php'								,{ 'title': 'Arzaq Kurdistan TV  '}, icons + 'arzaq-kurdistan-tv.png')
+    add_video_item('http://karwan.tv/live/raboon-tv.php'								,{ 'title': 'Raboon TV'}, icons + 'raboon-tv.png')
+    add_video_item('http://karwan.tv/live/dengbej-tv.php'								,{ 'title': 'Dengbej TV'}, icons + 'dengbej-tv.png')
+    add_video_item('http://karwan.tv/live/suryoyo-sat-tv.php'								,{ 'title': 'Suryoyo Sat TV'}, icons + 'suryoyo-sat-tv.png')
+    add_video_item('http://karwan.tv/live/kurdan-tv.php'								,{ 'title': 'kurdan TV'}, icons + 'kurdan-tv.png')
+    add_video_item('http://karwan.tv/live/kurdan-tv.php'								,{ 'title': 'kurdan TV'}, icons + 'kurdan-tv.png')
 
 
     xbmcplugin.endOfDirectory(plugin_handle)
