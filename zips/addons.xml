@@ -159,21 +159,6 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.kurdtv" name="Karwan TV" version="1.7" provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary>Karwan TV</summary>
-    <description>Kurdistan Livestreams http://karwan.tv</description>
-  </extension>
-</addon>
-
 
 <addon id="plugin.video.kmediatorrent" name="KMediaTorrent" version="2.3.7" provider-name="jmarth">
     <requires>
@@ -193,7 +178,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.2.8" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.2.9" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
