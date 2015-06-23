@@ -44,7 +44,7 @@ def main():
     add_video_item('http://live.kurdstream.net:1935/liveTrans//myStream_360p/playlist.m3u8'				,{ 'title': 'KurdMAX TV'}, icons + 'kurdmax-tv.png')
     add_video_item('http://38.99.146.181:7777/Kanal4.m3u8'						,{ 'title': 'Kanal 4'}, icons + 'kanal4.png')
     add_video_item('rtsp://amozhgary-tv.karwan.tv:1935/live/livestream'			,{ 'title': 'Amozhgary TV'}, icons + 'amozhgary-tv.png')
-    add_video_item('http://63.237.48.23/ios/GEM_KURD/GEM_KURD.m3u8'			,{ 'title': 'GEM Kurd TV'}, icons + 'gem-kurd-tv.png')
+    add_video_item('rtmp://gemtv.fms.visionip.tv/live/gemtv-gemtv-kurd-live-25f-4x3-SDq?ref=www.gemonline.tv&USER=GEM+Kurd'			,{ 'title': 'GEM Kurd TV'}, icons + 'gem-kurd-tv.png')
     add_video_item('http://162.244.81.103:1935/RegaTV/myStream/playlist.m3u8'					,{ 'title': 'REGA TV'}, icons + 'rega-tv.png')
     add_video_item('http://38.99.146.181:7777/VINTV.m3u8'						,{ 'title': 'Vin TV'}, icons + 'vin-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal3/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Newroz TV'}, icons + 'newroz-tv.png')
@@ -84,10 +84,6 @@ def main():
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//8afa5b0b23429365abd7dbbb4ba22326_live_0_0//index.m3u8'                                                    ,{ 'title': 'HAYAT TV  '}, icons + 'hayat-tv')
     add_video_item('http://origin2.live.web.tv.streamprovider.net//streams//894b55a9a7fa8f9b20da735e2112b034//index.m3u8'                                                    ,{ 'title': 'Havin TV'}, icons + 'havin-tv')
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//04c042818579efb61acf6a75e6a02774//index.m3u8'                                                    ,{ 'title': 'Govend TV '}, icons + 'govend-tv')
-
-
-
-http://origin.live.web.tv.streamprovider.net//streams//04c042818579efb61acf6a75e6a02774//index.m3u8
 
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
