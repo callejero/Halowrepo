@@ -63,7 +63,7 @@
 
 <addon id="plugin.video.swefilmer"
        name="SweFilmer"
-       version="1.20"
+       version="1.21"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -741,21 +741,6 @@
     <license>The MIT License</license>
     <forum>http://forum.xbmc.org/showthread.php?tid=129499</forum>
     <source>https://github.com/robweber/xbmcbackup</source>
-  </extension>
-</addon>
-
-<addon id="plugin.video.Dal" name="Karwan TV" version="1.7" provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary>Karwan TV</summary>
-    <description>Kurdistan Livestreams http://karwan.tv</description>
   </extension>
 </addon>
 
