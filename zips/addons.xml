@@ -96,6 +96,22 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.AKO" name="KARWANTV" version="1.9" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>FB  Halow Addons</summary>
+    <description>Kurdistan Livestreams
+ http://karwan.tv</description>
+  </extension>
+</addon>
+
 <addon id="plugin.video.freshstart" name="Fresh Start"
 	version="1.0.5" provider-name="tvaddons.ag">
   <requires>
@@ -157,22 +173,6 @@
 		<forum>http://forums.tvaddons.ag/forums/106-CONFIG-WIZARD</forum>
 		<website>http://www.tvaddons.ag/</website>
 	</extension>
-</addon>
-
-<addon id="plugin.video.AKO" name="KARWANTV" version="1.8" provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary>FB  Halow Addons</summary>
-    <description>Kurdistan Livestreams
- http://karwan.tv</description>
-  </extension>
 </addon>
 
 
