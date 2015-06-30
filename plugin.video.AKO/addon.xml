@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.AKO" name="KARWANTV" version="2.0" provider-name="Halow">
+<addon id="plugin.video.AKO" name="KarwanTV" version="2.3" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -9,8 +9,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary>FB  Halow Addons</summary>
-    <description>Kurdistan Livestreams
- http://karwan.tv</description>
+    <summary>KARWANTV</summary>
+    <description>Kurdistan Livestreams</description>
   </extension>
 </addon>
