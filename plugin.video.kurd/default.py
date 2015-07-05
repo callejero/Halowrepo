@@ -84,6 +84,8 @@ def main():
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//8afa5b0b23429365abd7dbbb4ba22326_live_0_0//index.m3u8'                                                    ,{ 'title': 'HAYAT TV  '}, icons + 'hayat-tv')
     add_video_item('http://origin2.live.web.tv.streamprovider.net//streams//894b55a9a7fa8f9b20da735e2112b034//index.m3u8'                                                    ,{ 'title': 'Havin TV'}, icons + 'havin-tv')
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//04c042818579efb61acf6a75e6a02774//index.m3u8'                                                    ,{ 'title': 'Govend TV '}, icons + 'govend-tv')
+    add_video_item('http://live.kurdstream.net:1935/liveTrans/Pepule_360p/playlist.m3u8'                                                    ,{ 'title': 'KurdMax Pepûle TV '}, icons + 'kurdmax-pepule-tv')
+
 
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
