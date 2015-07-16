@@ -93,7 +93,6 @@ def Categories():
     AddDir("[COLOR yellow][B]Cartoon [/B][/COLOR]", Raw+"a44ww8ni" ,4 ,"http://forums.windowscentral.com/attachments/app-spotlight/61347d1396600938t-tomjerry_icon.png")
     AddDir("[COLOR purple][B]Music & Radio [/B][/COLOR]", Raw+"PbWi4Njb" ,4 ,"http://us.123rf.com/450wm/bonumopus/bonumopus1502/bonumopus150200453/36756832-set-of-music-and-wireless-web-and-mobile-logo-icons-isolated-on-white-vector-radio-symbols.jpg")
     AddDir("[COLOR blue][B]Streamax TV [/B][/COLOR]", Raw+"vVgyFj2V" ,4 ,"http://streamax.tv/wp-content/uploads/2015/05/Streamax_Q4_2.png")
-    AddDir("[COLOR blue][B]HALOW BOX  [/B][/COLOR]", Raw+"UYrgzHRP" ,4 ,"http://www.psdgraphics.com/file/retro-tv-icon.jpg")
 
     xbmc.executebuiltin("Container.SetViewMode(50)") 
    
