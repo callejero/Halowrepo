@@ -44,7 +44,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.3.3" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.3.4" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -926,7 +926,7 @@
     </extension>
 </addon>
 
-<addon id="repository.Halowrepo" name="  [COLOR lime][B]HALOW [/COLOR][COLOR white]Repository[/B][/COLOR]" version="1.8.0" provider-name="HalowRepo">
+<addon id="repository.Halowrepo" name="  [COLOR lime][B]HALOW [/COLOR][COLOR white]Repository[/B][/COLOR]" version="1.6.0" provider-name="HalowRepo">
 	<extension point="xbmc.addon.repository" name="  [COLOR lime][B]Halow[/COLOR][COLOR white]Repository[/B][/COLOR]">
         <info compressed="false">https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml.md5</checksum>
