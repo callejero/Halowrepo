@@ -247,7 +247,7 @@
 
 <addon id="plugin.video.viaplay"
        name="Viaplay"
-       version="2.0.8"
+       version="2.0.9"
        provider-name="dsd">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
