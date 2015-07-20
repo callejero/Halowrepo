@@ -151,6 +151,7 @@ def MOVIES():
         AddDir("[COLOR green][B]Bangladesh LIVE TV[/B][/COLOR]", Raw+"dH2PZY5B" ,4 ,"http://www.fancyicons.com/free-icons/103/flags/png/256/bangladesh_flag_256.png")
         AddDir("[COLOR green][B]Czech LIVE TV[/B][/COLOR]", Raw+"M84yYRHe" ,4 ,"http://img.freeflagicons.com/thumb/square_icon/czech_republic/czech_republic_640.png")
         AddDir("[COLOR green][B]Slovakien LIVE TV[/B][/COLOR]", Raw+"Mnhiv1Tf" ,4 ,"http://static4.depositphotos.com/1003329/334/i/950/depositphotos_3349502-Icon-with-flag-of-Slovakia-isolated.jpg")
+        AddDir("[COLOR green][B]Indonesian LIVE TV[/B][/COLOR]", Raw+"H2tigGCQ" ,4 ,"http://www.country-dialing-codes.net/img/png-country-4x2-fancy-res-1280x960/id.png")
 
         xbmc.executebuiltin("Container.SetViewMode(500)") 
         
