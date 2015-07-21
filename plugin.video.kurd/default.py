@@ -33,7 +33,7 @@ def main():
 
     add_video_item('http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/kurdsat/ls_satlink/b_528.m3u8'				,{ 'title': 'KurdSat TV'}, icons + 'kurdsat-tv.png')
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': 'KurdSat News'}, icons + 'kurdsat-news-tv.png')
-    add_video_item('http://63.237.48.23/ios/KURDISTAN_TV/KURDISTAN_TV.m3u8'			,{ 'title': 'Kurdistan TV'}, icons + 'kurdistan-tv.png')
+    add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': 'Kurdistan TV'}, icons + 'kurdistan-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Zagros TV'}, icons + 'zagros-tv.png')
     add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt1/_definst_/mp4:nrt1.stream_1'					,{ 'title': 'NRT TV HD'}, icons + 'nalia-tv.png')
     add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt2/_definst_/mp4:nrt2.stream_1'				,{ 'title': 'Nalia 2 TV HD'}, icons + 'nalia-2-tv.png')
@@ -86,6 +86,7 @@ def main():
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//04c042818579efb61acf6a75e6a02774//index.m3u8'                                                    ,{ 'title': 'Govend TV '}, icons + 'govend-tv')
     add_video_item('http://live.kurdstream.net:1935/liveTrans/Pepule_360p/playlist.m3u8'                                                    ,{ 'title': 'KurdMax Pepûle TV '}, icons + 'kurdmax-pepule-tv')
     add_video_item('http://38.99.146.181:7777/KirkukTV.m3u8'                                                    ,{ 'title': 'KIRKÛK TV ZINDÎ'}, icons + 'kirkuk-tv')
+    add_video_item('rtmp://si.trtcdn.com/tv/trt6/mp4:trt6_3'                                                    ,{ 'title': 'TRT 6'}, icons + 'trt6-tv')
     
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
