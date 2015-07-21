@@ -1,0 +1,10 @@
+[1.22.0]
+Added Right Click Proxy Option
+Added Multi Link
+[1.17.0]
+Added IP Banning
+[1.16.0]
+ADDED CHAT SYSTEM
+
+SERVER FILES AVALIBLE
+due to the lack of people being bothered to give me feedback. people wishing to get the server files will have to
