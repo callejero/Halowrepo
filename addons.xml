@@ -63,7 +63,7 @@
 
 <addon id="plugin.video.swefilmer"
        name="SweFilmer"
-       version="1.21"
+       version="1.22"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
