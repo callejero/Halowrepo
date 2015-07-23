@@ -1,381 +1,60 @@
-﻿<item>
-<title>BBC Persian HD</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel2/hls/1/playlist.m3u8</link>
-<thumbnail>http://www.bbc.co.uk/news/special/2015/newsspec_11063/persian_1024x576.png</thumbnail>
-</item>
-<item>
-<title>BBC TWO</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel8/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.thisisfive.co.uk/presbits/bbc/two/2004/logo03.jpg</thumbnail>
-</item>
-<item>
-<title>ITV 1</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel12/hls/3/playlist.m3u8</link>
-<thumbnail>http://i2.cdnds.net/12/46/618×314/media_new_itv_logo.jpg</thumbnail>
-</item>
-<item>
-<title>CHANNEL 4</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel10/hls/3/playlist.m3u8</link>
-<thumbnail>http://flowtv.org/wp-content/uploads/2009/03/c4logo440.png</thumbnail>
-</item
-<item>
-<title>CHANNEL 5</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel6/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.logoguru.co.uk/blog/wp-content/uploads/2011/03/channel-5-before.png</thumbnail>
-</item
-<item>
-<title>CBEEBIES</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder8/coder.channels.channel14/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.schooljotter.com/imagefolders/dafen/cbeebies_logo_400.jpg</thumbnail>
-</item
-<item>
-<title>CBBC</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder7/coder.channels.channel4/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.woapa.co.uk/upload/U584063_cbbc_logo.jpg</thumbnail>
-</item
-<item>
-<title>BBC ALBA</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel2/hls/2/playlist.m3u8</link>
-<thumbnail>http://www.thedrum.com/uploads/drum_basic_article/94080/main_images/bbc-alba.jpg</thumbnail>
-</item
-<item>
-<title>BBC NEWS</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder7/coder.channels.channel17/hls/3/playlist.m3u8</link>
-<thumbnail>http://upload.wikimedia.org/wikipedia/en/thumb/f/ff/BBC_News.svg/200px-BBC_News.svg.png</thumbnail>
-</item
-<item>
-<title>KISS</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel13/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.weareseventeen.com/up/projects/487/942882502.jpg</thumbnail>
-</item
-<item>
-<title>KERRANG</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel16/hls/3/playlist.m3u8</link>
-<thumbnail>http://images.contactmusic.com/img/old/kerrang1x08x05x03.gif</thumbnail>
-</item
-<item>
-<title>FRANCE 24</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder7/coder.channels.channel14/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.cbnews.fr/var/media/99/original/france24-resize-98020.jpg</thumbnail>
-</item
-<item>
-<title>SMASH HITS</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder1/coder.channels.channel14/hls/4/playlist.m3u8</link>
-<thumbnail>http://www.mediauk.com/logos/100/41566.png</thumbnail>
-</item>
-<item>
-<title>THE BOX</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel10/hls/4/playlist.m3u8</link>
-<thumbnail>http://www.ohwrd.com/wp-content/uploads/2009/08/thebox.jpg</thumbnail>
-</item>
-<item>
-<title>HEAT</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel4/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.heatworld.com/images/109957_615x10000_STD/2012/6/heat_logo_x.jpg</thumbnail>
-</item>
-<item>
-<title>CAPITAL TV</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder7/coder.channels.channel8/hls/3/playlist.m3u8</link>
-<thumbnail>https://www.musicweek.com/cimages/19a2560129307a46a177a8c16bd412b9.jpg</thumbnail>
-</item>
-<item>
-<title>CLUBLAND</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder5/coder.channels.channel14/hls/3/playlist.m3u8</link>
-<thumbnail>http://i2.bebo.com/042/7/mediuml/2008/03/21/11/647921526a7208306229ml.jpg</thumbnail>
-</item>
-<item>
-<title>PLANET POP</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder5/coder.channels.channel17/hls/3/playlist.m3u8</link>
-<thumbnail>http://hub.tv-ark.org.uk/images/music/music_images/planet_pop_2000a.jpg</thumbnail>
-</item>
-<item>
-<title>AKA</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder6/coder.channels.channel2/hls/3/playlist.m3u8</link>
-<thumbnail>http://pbs.twimg.com/profile_images/378800000438149610/96fe763222ddc27a5f01dc34ee550485.jpeg</thumbnail>
-</item>
-<item>
-<title>NOW THATS WHAT I CALL MUSIC</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder6/coder.channels.channel5/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.thevalueengineers.com/wp-content/uploads/2013/07/now-thats-what-i-call-music-1.jpg</thumbnail>
-</item>
-<item>
-<title>4 MUSIC</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder1/coder.channels.channel11/hls/4/playlist.m3u8</link>
-<thumbnail>http://2.bp.blogspot.com/_7UXGRIBLGTU/SlYD88sOOYI/AAAAAAAAAds/Gpzci5otMdM/s320/08141950300_4music_logo.jpg</thumbnail>
-</item
-<item>
-<title>HEART</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder7/coder.channels.channel10/hls/3/playlist.m3u8</link>
-<thumbnail>http://www.jumpdesign.co.uk/assets/templates/jump/videos/placeholder/heart_2.jpg</thumbnail>
-</item
-<item>
-<title>RACING UK</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder1/coder.channels.channel8/hls/3/playlist.m3u8</link>
-<thumbnail>http://substantialfilms.co.uk/wp-content/uploads/2012/12/racing.uk_.logo_.jpg</thumbnail>
-</item
-<item>
-<title>AT THE RACES</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder1/coder.channels.channel2/hls/1/playlist.m3u8</link>
-<thumbnail>http://www.brighton-racecourse.co.uk/_images/racinghome/ATR-logo.jpg</thumbnail>
-</item
-<item>
-<title>BOX NATION</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder1/coder.channels.channel5/hls/1/playlist.m3u8</link>
-<thumbnail>http://cdn.markcomedia.com/dyn/nL/dP/nLdPmgTVCgE/_/tIIyubfFgL0/3vlg/box-nation-logo.png</thumbnail>
-<item>
-<item>
-<title>MTV ROCKS</title>
-<link>http://tv.goweb.com/share/channels/channel/id/446/sign/18dc548a05abb23b014800dac36ac4a16a63fbb7/base/41398</link>
-<thumbnail>http://upload.wikimedia.org/wikipedia/en/5/58/MTV_Rocks_logo_2013.png</thumbnail>
-</item
-<item>
-<title>HBO</title>
-<link>rtmp://50.7.137.90/iguide playpath=0bf02qe6msgtu4s swfUrl=http://www.iguide.to/player/secure_player_iguide_token.swf live=1 pageUrl=http://www.iguide.to/view/1/HBO token=#ed%h0#w18623jsda6523lDGDve</link>
-<thumbnail>http://img.talkandroid.com/uploads/2013/07/HBO_Logo.jpg</thumbnail>
-</item
-<item>
-<title>MTV LIVE HD</title>
-<link>http://amotv.6te.net/tot.php?8d45473ff4ca44d79e1abc4516c2fee0</link>
-<thumbnail>http://teve.ba/img/content/mtv-live-hd.gif</thumbnail>
-</item
-<item>
-<title>FX HD</title>
-<link>http://amotv.6te.net/tot.php?2e0e4b05aa6e428593f3b45b710045b7</link>
-<thumbnail>http://www.thenoobnews.com/uploads/2011/07/FX_logo.svg-copy.jpg</thumbnail>
-</item
-<item>
-<title>OUTDOOR HD</title>
-<link>http://195.189.239.15/streaming/outchhd/fullhd/playlist.m3u8</link>
-<thumbnail>http://www.hooknlook.com/wp-content/uploads/2012/06/OutdoorChannel_Logo.gif</thumbnail>
-</item
-<item>
-<title>CNN</title>
-<link>http://hls.novotelecom.ru/streaming/cnn/tvrec/playlist.m3u8</link>
-<thumbnail>http://cdn2.stormgrounds.com/stormgrounds-cdn/media/cnn-logo.jpg</thumbnail>
-</item
-<item>
-<title>ANIMAL PLANET HD</title>
-<link>http://195.189.239.15/streaming/aphd/fullhd/playlist.m3u8</link>
-<thumbnail>http://1.bp.blogspot.com/-cDXx3i_yfqc/UMRmvqROUQI/AAAAAAAANAQ/JqisBuOrCSM/s1600/Animal+planet+HD+UPC+logo.jpg</thumbnail>
-</item
-<item>
-<title>COMEDY CENTRAL</title>
-<link>http://amotv.6te.net/tot.php?2f18d4ba25224edaa8bb9aac94b00d4f</link>
-<thumbnail>http://www.sbindependent.org/files/2011/10/comedycentral-logo-red-stacked.jpg</thumbnail>
-</item
-<item>
-<title>ITV CHOICE</title>
-<link>http://amotv.6te.net/tot.php?e36b99bcd26648af9db2261785c77b7a</link>
-<thumbnail>http://gozonews.com/wp-content/uploads/2013/03/itv_choice_logo.jpg</thumbnail>
-</item
-<item>
-<title>SKY SPORTS 1</title>
-<link>rtmpe://89.46.102.70:443/liveedge playpath=newsky1 swfurl=http://hqstreams.tv/jwplayer/jwplayer.flash.swf pageUrl=http://hqstreams.tv/</link>
-<thumbnail>http://www.aalamiy.com/images/sky_sports1.png</thumbnail>
-</item
-<item>
-<title>SKY SPORTS 2</title>
-<link>rtmp://31.220.0.133:1935/live playpath=ss2x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=ss2x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>http://www.entertainmentdoor.com.pk/images/channel_image/sky_sports2.png</thumbnail>
-</item
-<item>
-<title>SKY SPORTS 3</title>
-<link>rtmp://31.220.0.82:1935/live playpath=ss3x swfUrl=http://p.jwpcdn.com/6/8/jwplayer.flash.swf live=1 pageUrl=http://www.eucast.tv</link>
-<thumbnail>http://img2.wikia.nocookie.net/__cb20100803180611/logopedia/images/7/79/Sky_Sports_3_2010.png</thumbnail>
-</item
-<item>
-<title>SKY SPORTS 4</title>
-<link>rtmp://31.220.0.103:1935/live playpath=ss4x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=ss4x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>http://samistream.com/thumbs/skysports4.png</thumbnail>
-</item
-<item>
-<title>SKY SPORTS NEWS</title>
-<link>rtmp://31.220.0.134:1935/live playpath=ssnewsrx swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=ssnewsrx&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>http://www.fm-base.co.uk/forum/attachments/football-manager-2012-stories/268180d1300972362-juventus-il-nuovo-barca-new-barcelona-sky-sports-news-logo-1.png</thumbnail>
-</item
-<item>
-<title>SKY SPORTS F1</title>
-<link>rtmp://31.220.0.82:1935/live playpath=ssf1x swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv</link>
-<thumbnail>http://www.touchline.tv/wp-content/uploads/2011/11/skyf1hd.jpg</thumbnail>
-</item
-<item>
-<title>BT SPORT 1</title>
-<link>rtmp://31.220.0.103:1935/live playpath=bt1x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=bt1x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>https://www.magnet.ie/wp-content/uploads/2011/12/BT_SPORT_LOGO1.jpg</thumbnail>
-</item
-<item>
-<title>BT SPORT 2</title>
-<link>rtmp://31.220.0.133:1935/live playpath=bt2x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=bt2x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>https://www.magnet.ie/wp-content/uploads/2011/12/BT_SPORT_LOGO1.jpg</thumbnail>
-</item
-<item>
-<title>PREMIER SPORTS</title>
-<link>rtmpe://89.46.102.70:443/liveedge playpath=premier swfurl=http://hqstreams.tv/jwplayer/jwplayer.flash.swf pageUrl=http://hqstreams.tv</link>
-<thumbnail>http://upload.wikimedia.org/wikipedia/en/8/83/Premier_Sports_logo.png</thumbnail>
-</item
-<item>
-<title>EUROSPORT 1</title>
-<link>rtmp://31.220.0.104:1935/live playpath=euro1x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=euro1x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>http://www.live-footballontv.com/Images/football-on-british-eurosport.jpg</thumbnail>
-</item
-<item>
-<item>
-<title>EUROSPORT 2</title>
-<link>rtmp://31.220.0.104:1935/live playpath=euro2x swfUrl=http://www.eucast.tv/player5.9.swf pageUrl=http://www.eucast.tv/embed.php?live=euro2x&vw=620&vh=490 live=true timeout=10</link>
-<thumbnail>http://www.worldseriesofbackgammon.com/commons/images/Logo_EuroSport2.gif</thumbnail>
-</item
-<item>
-<title>ESPN UK</title>
-<link>rtmpe://play.finecast.tv/live playpath=espnukkk8 swfUrl=http://www.finecast.tv/player/player.swf pageUrl=http://www.finecast.tv/embed.php?u=espnukkk8&vw=600&vh=400 live=1 timeout=10</link>
-<thumbnail>http://i.espn.co.uk/espnuk/app_promo.jpg</thumbnail>
-</item
-<item>
-<title>ESPN USA</title>
-<link>rtmp://46.246.29.130:1935/stream/46terg.stream swfUrl=http://04stream.com/p/boopo.swf live=1</link>
-<thumbnail>http://3.bp.blogspot.com/-VFGXTOVUukA/Ue63yM5EFtI/AAAAAAAACRs/ErfDGezwkiQ/s1600/espn_america.jpg</thumbnail>
-</item
-<item>
-<title>NFL NETWORK</title>
-<link>rtmp://31.7.58.250:1935/stream/ playpath=0XB9uW6aK5.stream swfUrl=http://04stream.com/p/boopo.swf pageUrl=http://negmtv.altervista.org/php/sportsplayer3.php?ch=NFL live=1 timeout=10</link>
-<thumbnail>http://deviousmedia.com/wp-content/uploads/2012/06/nfl-network-390×224.jpg</thumbnail>
-</item
-<item>
-<title>NBA NETWORK</title>
-<link>rtmpe://watch.playfooty.tv/live playpath=nba1569 swfUrl=http://www.playfooty.tv/play/player/player.swf live=1 pageUrl=http://www.playfooty.tv</link>
-<thumbnail>http://tvbythenumbers.zap2it.com/wp-content/uploads/2012/02/Nba-Tv-larger.jpg</thumbnail>
-</item
-<item>
-<title>WWE NETWORK</title>
-<link>rtmp://108.59.14.229/live playpath=jizzywizzyyyyyy?id=199683 Conn=S:OK swfUrl=http://www.mips.tv/content/scripts/eplayer.swf pageUrl=http://www.mips.tv/embedplayer/jizzywizzyyyyyy/1/650/450 live=true timeout=10</link>
-<thumbnail>http://www.wwe.com/f/styles/ep_trending/public/article/thumb/2014/02/wwe-network/20140102_EPLIGHT_Network_Announcement_nodate_C.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 1</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST1 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 2</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST2 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 3</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST3 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 4</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST4 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 5</title>
-<link><rtmpe://46.246.124.26:1935/redirect playpath=BST5swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 6</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST6 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 7</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST7  swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 8</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST8  swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 9</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST9  swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 10</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST10 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 11</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST11 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 12</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST12 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 13</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST13 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 13</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST14 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>BEIN SPORT 15</title>
-<link>rtmpe://46.246.124.26:1935/redirect playpath=BST15 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-<thumbnail>http://sameerbook.com/upload/350x266x3209e8a85123fcb8614d5968c1bb00f7.jpeg.pagespeed.ic.ixjxQa8ZAd.jpg</thumbnail>
-</item>
-<item>
-<title>CARTOON NETWORK</title>
-<link>rtmpe://173.208.201.162:1935/goLive playpath=eZ7xZHVw5Grm0Z5 swfUrl=http://b17014255105be61b178-d8c0dbd82389bad2adcb7a22d1883b64.r92.cf5.rackcdn.com/jwplayer.flash.swf live=1 pageUrl=http://envivo.pw/ token=OOG17t.x#K9Vh#|</link>
-<thumbnail>http://www.tvfrekans.com/wp-content/uploads/2012/10/carton-net-tv-logo-resmi.jpg</thumbnail>
-</item
-<item>
-<title>NICKELODEON</title>
-<link>rtmpe://watch.playfooty.tv/live playpath=nick1569 swfUrl=http://www.playfooty.tv/play/player/player.swf live=1 pageUrl=http://www.playfooty.tv/play/embed.php?u=nick1569&vw=600&vh=430</link>
-<thumbnail>http://images5.fanpop.com/image/photos/27800000/Nick-Logo-nickelodeon-27884133-1130-705.jpg</thumbnail>
-</item
-<item>
-<title>CRIME INVESTIGATION</title>
-<link>http://202.75.23.36:8800/live/ch47/01.m3u8</link>
-<thumbnail>http://www.1000tvchannel.com/media/channel_images/2013/06/05/key_art_crime_investigation_network.jpg</thumbnail>
-</item
-<item>
-<title>CARTOONITO</title>
-<link>http://amotv.6te.net/tot.php?dff1502eb25c4912aea009df5d0fde9b</link>
-<thumbnail>http://www.urbanangelsagency.com/wp-content/uploads/cartoonito-print-logo.jpg</thumbnail>
-</item
-<item>
-<title>NAT GEO PEOPLE HD</title>
-<link>http://amotv.6te.net/tot.php?7ad09373f65c48d5bb6aa6c3b2ca519a</link>
-<thumbnail>http://www.mcn.com.au/Upload/FileStore/Cache/media/10385-logo-a66029a7.jpg</thumbnail>
-</item
-<item>
-<title>BIO</title>
-<link>http://amotv.6te.net/tot.php?169a149fd1ef40edba0bbfc8e0f1bdd1</link>
-<thumbnail>http://www.limetv.com/images/channel-logos/biography-logo.jpg</thumbnail>
-</item
-<item>
-<title>MAGIC</title>
-<link>http://cdn.live.tvplayer.simplestream.com/coder2/coder.channels.channel7/hls/3/playlist.m3u8</link>
-<thumbnail>http://img.dooyoo.co.uk/GB_EN/175/music/music_radio_stations/magic_105_4_fm.jpg</thumbnail>
-</item
-<item>
-<title>SPIKE TV</title>
-<link>rtmpe://173.208.201.162:1935/goLive playpath=OuTMDUaJxi3Hmqh swfUrl=http://b17014255105be61b178-d8c0dbd82389bad2adcb7a22d1883b64.r92.cf5.rackcdn.com/jwplayer.flash.swf live=1 pageUrl=http://envivo.pw/ token=OOG17t.x#K9Vh#|</link>
-<thumbnail>http://i9.photobucket.com/albums/a83/ivanas/spike_tv2.png</thumbnail>
-</item
-<item>
-<title>TNT</title>
-<link>rtmpe://173.208.201.162:1935/goLive playpath=wG35AzCNwnZU5vj swfUrl=http://rackcdn.com/jwplayer.flash.swf live=1 pageUrl=http://envivo.pw/ token=OOG17t.x#K9Vh#|</link>
-<thumbnail>http://img4.wikia.nocookie.net/__cb20091120155408/logopedia/images/4/41/TNT_logo_2008.png</thumbnail>
-</item
-<item>
-<title>SKY NEWS HD</title>
-<link>http://amotv.6te.net/tot.php?31b003ab7e7749a798fe00424e3dd9ff</link>
-<thumbnail>http://up.metropol247.co.uk/jordanhowell/skynewshd-newlogo.png</thumbnail>
-</item
-<item>
-<title>FOX NEWS</title>
-<link>rtmpe://watch.playfooty.tv/live playpath=foxnews1569 swfUrl=http://www.playfooty.tv/play/player/player.swf live=1 pageUrl=http://www.playfooty.tv/play/embed.php?u=foxnews1569&vw=600&vh=430</link>
-<thumbnail>http://cdn6.triplepundit.com/wp-content/uploads/2011/11/fox-news-logo.jpg</thumbnail>
-</item
+<items>
+<item><title>Halow</title><thumbnail>83.png</thumbnail><link>http://origin.live.web.tv.streamprovider.net/streams/7acfc999bbde179fc45f18506125345f_live_0_0/index.m3u8</link></item>
+<item><title>Show TV</title><thumbnail>96.png</thumbnail><link>http://origin2.live.web.tv.streamprovider.net/streams/1c3194be3e42b53e3b61831517eb972a_live_0_0/index.m3u8</link></item>
+<item><title>Fox Turk</title><thumbnail>195.png</thumbnail><link>http://edge.ailetv.net/org1/foxtr_me/playlist.m3u8</link></item>
+<item><title>TV 8</title><thumbnail>tv8.png</thumbnail><link>http://yayin.canlitv.mobi/hls/tv8.m3u8</link></item>
+<item><title>TV 8 int</title><thumbnail>tv8.png</thumbnail><link>http://edge.ailetv.net/org4/tv8_me/playlist.m3u8</link></item>
+<item><title>Kanal D</title><thumbnail>85.png</thumbnail><link>http://nimlive1.giniko.com/kanald/kanald.stream/playlist.m3u8---85xxx</link></item>
+<item><title>Kanal D alternative</title><thumbnail>85.png</thumbnail><link>http://live.netd.com.tr/S1/HLS_LIVE/kanald/500/prog_index.m3u8</link></item>
+<item><title>a TV</title><thumbnail>98.png</thumbnail><link>http://nimlive1.giniko.com/atvtv/atvtvtv.stream/playlist.m3u8---98xxx</link></item>
+<item><title>minica Cocuc</title><thumbnail>minika.png</thumbnail><link>http://hls.turkuvazgroup.net:1935/minikacocuk/minikacocuk3/playlist.m3u8</link></item>
+<item><title>TRT</title><thumbnail>101.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTHD_1@182045/master.m3u8</link></item>
+<item><title>TRT 1</title><thumbnail>13.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRT1HD_1@181842/master.m3u8</link></item>
+<item><title>TRT 6</title><thumbnail>006.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRT6_1@181944/master.m3u8</link></item>
+<item><title>TRT Turk</title><thumbnail>51.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTTURK_1@182144/master.m3u8</link></item>
+<item><title>TRT Cocuc</title><thumbnail>50.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTCOCUK_1@181844/master.m3u8</link></item>
+<item><title>TRT Belgesel</title><thumbnail>002.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTBELGESEL_1@182145/master.m3u8</link></item>
+<item><title>TRT Haber</title><thumbnail>196.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTHABERHD_1@181942/master.m3u8</link></item>
+<!-- <item><title>TRT Muzik</title><thumbnail>49.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTMUZIK_1@181845/master.m3u8</link></item> -->
+<item><title>TRT Muzik</title><thumbnail>49.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTMUZIK_1@181845/index_1200_av-p.m3u8</link></item>
+<item><title>TRT Spor</title><thumbnail>194.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTSPOR1_1@182042/master.m3u8</link></item>
+<item><title>TRT 3 TBMM</title><thumbnail>tr1.png</thumbnail><link>http://meclistv-lh.akamaihd.net/i/event_1@190503/master.m3u8</link></item>
+<item><title>TRT Avaz</title><thumbnail>tr2.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTAVAZ_1@182244/master.m3u8</link></item>
+<item><title>TRT Okul</title><thumbnail>tr3.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTOKUL_1@182245/master.m3u8</link></item>
+<item><title>TRT Arapca</title><thumbnail>tr4.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTARAPCA_1@181945/master.m3u8</link></item>
+<item><title>TRT Diyanet</title><thumbnail>tr5.png</thumbnail><link>http://trtcanlitv-lh.akamaihd.net/i/TRTDIYANET_1@182344/master.m3u8</link></item>
+<item><title>Atlas Ordu TV</title><thumbnail>209.png</thumbnail><link>http://nimlive1.giniko.com/atlastv/atlastv.stream/playlist.m3u8---209xxx</link></item>
+<item><title>Bursa AS TV</title><thumbnail>211.png</thumbnail><link>http://nimlive1.giniko.com/bursaas/bursaas.stream/playlist.m3u8---211xxx</link></item>
+<item><title>CNBC-e</title><thumbnail>133.png</thumbnail><link>http://nimlive1.giniko.com/cnbce/cnbce.stream/playlist.m3u8---133xxx</link></item>
+<item><title>Ebru TV</title><thumbnail>47.png</thumbnail><link>http://nimlive1.giniko.com/ebrutv/ebrutv.stream/playlist.m3u8---47xxx</link></item>
+<item><title>EM TV</title><thumbnail>208.png</thumbnail><link>http://nimlive1.giniko.com/emtv1/emtv1.stream/playlist.m3u8---208xxx</link></item>
+<item><title>FB TV</title><thumbnail>210.png</thumbnail><link>http://nimlive1.giniko.com/fbtv1/fb-tv.stream/playlist.m3u8---210xxx</link></item>
+<item><title>Kanal 7</title><thumbnail>199.png</thumbnail><link>http://nimlive1.giniko.com/kanal7/kanal7.stream/playlist.m3u8---199xxx</link></item>
+<item><title>Kral Pop</title><thumbnail>84.png</thumbnail><link>http://nimlive1.giniko.com/kraltv/kraltv.stream/playlist.m3u8---84xxx</link></item>
+<item><title>Maxi TV</title><thumbnail>212.png</thumbnail><link>http://nimlive1.giniko.com/maxitv/maxitv.stream/playlist.m3u8---212xxx</link></item>
+<item><title>Muzik Turk</title><thumbnail>172.png</thumbnail><link>http://nimlive1.giniko.com/muzikturk/muzikturk.stream/playlist.m3u8---172xxx</link></item>
+<item><title>Sports TV</title><thumbnail>215.png</thumbnail><link>http://nimlive1.giniko.com/sportstv/sportstv/playlist.m3u8---215xxx</link></item>
+<item><title>Planet Cocuk</title><thumbnail>175.png</thumbnail><link>http://nimlive1.giniko.com/planetc/planetc.stream/playlist.m3u8---175xxx</link></item>
+<item><title>Planet Mutfak</title><thumbnail>177.png</thumbnail><link>http://nimlive1.giniko.com/planetm/planetm.stream/playlist.m3u8---177xxx</link></item>
+<item><title>Planet Pembe</title><thumbnail>176.png</thumbnail><link>http://nimlive1.giniko.com/planetp/planetp.stream/playlist.m3u8---176xxx</link></item>
+<item><title>Planet Turk</title><thumbnail>178.png</thumbnail><link>http://nimlive1.giniko.com/planett/planett.stream/playlist.m3u8---178xxx</link></item>
+<item><title>Samanyolu TV</title><thumbnail>48.png</thumbnail><link>http://nimlive1.giniko.com/samanyolu/samanyolu.stream/playlist.m3u8---48xxx</link></item>
+<item><title>Super TV</title><thumbnail>165.png</thumbnail><link>http://nimlive1.giniko.com/supertv/supertv.stream/playlist.m3u8---165xxx</link></item>
+<item><title>Turk Muzik Birligi TV</title><thumbnail>227.png</thumbnail><link>http://nimlive1.giniko.com/tmb_tv/tmb_tv.stream/playlist.m3u8---227xxx</link></item>
+<item><title>TV 2</title><thumbnail>173.png</thumbnail><link>http://nimlive1.giniko.com/tv2tv/tv_2tv.stream/playlist.m3u8---173xxx</link></item>
+<item><title>Ulke TV</title><thumbnail>200.png</thumbnail><link>http://nimlive1.giniko.com/ulketv/ulketv.stream/playlist.m3u8---200xxx</link></item>
+<item><title>Yurdum TV</title><thumbnail>207.png</thumbnail><link>http://nimlive1.giniko.com/yurdumtv/yurdum.stream/playlist.m3u8---207xxx</link></item>
+<item><title>World Travel Channel</title><thumbnail>198.png</thumbnail><link>http://nimlive1.giniko.com/worldtravel/worldtravel.stream/playlist.m3u8---198xxx</link></item>
+<item><title>NTV</title><thumbnail>131.png</thumbnail><link>http://origin2.live.web.tv.streamprovider.net/streams/725528006e858fe951867f4e2436843f_live_0_0/index.m3u8</link></item>
+<item><title>NTV Spor</title><thumbnail>132.png</thumbnail><link>http://origin.live.web.tv.streamprovider.net/streams/a820629b8abc43c73c76b091086c138a_live_0_0/index.m3u8</link></item>
+<item><title>Euro D</title><thumbnail>164.png</thumbnail><link>http://nimlive1.giniko.com/eurod/eurod.stream/playlist.m3u8---164xxx</link></item>
+
+<item><title>Sinema 1</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema</link></item>
+<item><title>Sinema 2</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema1</link></item>
+<item><title>Sinema 3</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema2</link></item>
+<item><title>Sinema 4</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema3</link></item>
+<item><title>Sinema 5</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema4</link></item>
+<item><title>Sinema 6</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema5</link></item>
+<item><title>Sinema 7</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinema6</link></item>
+<item><title>Sinema 8</title><thumbnail>none</thumbnail><link>mms://yayin7.canliyayin.org/sinematurk</link></item>
+</items>
