@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import cloudflare
 import cookielib
 import HTMLParser
 import os
@@ -8,8 +9,7 @@ import urllib
 import urllib2
 import urlparse
 
-SAVE_FILE = False
-BASE_URL = 'http://www.swefilmer.com/'
+BASE_URL = 'http://www.swehd.com/'
 USERAGENT = ' Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 
 class Swefilmer:
@@ -25,16 +25,19 @@ class Swefilmer:
 
         http_error_301 = http_error_303 = http_error_307 = http_error_302
 
+    class HeadRequest(urllib2.Request):
+        def get_method(self):
+            return 'HEAD'
 
-    def __init__(self, xbmc, xbmcplugin, xbmcgui, xbmcaddon):
+
+    def __init__(self, xbmc, xbmcplugin, xbmcgui, settings):
         self.xbmc = xbmc
         self.xbmcplugin = xbmcplugin
         self.xbmcgui = xbmcgui
-        self.xbmcaddon = xbmcaddon
         self.html_parser = HTMLParser.HTMLParser()
         temp = self.xbmc.translatePath(
-            os.path.join(self.xbmcaddon.Addon().getAddonInfo('profile').\
-                             decode('utf-8'), 'temp'))
+            os.path.join(settings.getAddonInfo('profile').\
+                         decode('utf-8'), 'temp'))
         if not os.path.exists(temp):
             os.makedirs(temp)
         cookiejarfile = os.path.join(temp, 'swefilmer_cookies.dat')
@@ -43,40 +46,76 @@ class Swefilmer:
             self.cookiejar.load()
 
         cookieprocessor = urllib2.HTTPCookieProcessor(self.cookiejar)
-        opener = urllib2.build_opener(Swefilmer.MyHTTPRedirectHandler,
-                                      cookieprocessor)
-        urllib2.install_opener(opener)
+        self.opener = urllib2.build_opener(Swefilmer.MyHTTPRedirectHandler,
+                                           cookieprocessor)
 
-    def get_url(self, url, filename=None, referer=None, data=None):
+        self.save_file = settings.getSetting('save_file')
+
+    def _get_url(self, url, filename=None, referer=None, data=None, request=None, cookie=None):
         """Send http request to url.
         Send the request and return the html response.
         Sends cookies, receives cookies and saves them.
-        Resonse html can be saved in file for debugging.
+        Response html can be saved in file for debugging.
         """
-        self.xbmc.log('get_url' + ((' (' + filename + ')')
-                                   if filename else '') + ': ' +
-                      str(url), level=self.xbmc.LOGDEBUG)
-        req = urllib2.Request(url)
-        req.add_header('User-Agent', USERAGENT)
+        self.xbmc.log('***** _get_url' + ((' (' + filename + ')')
+                                   if filename else '') + ' referer=' +
+                      str(referer) + ': ' + str(url), level=self.xbmc.LOGDEBUG)
+        if request == None:
+            request = urllib2.Request(url)
+        request.add_header('User-Agent', USERAGENT)
         if referer:
-            req.add_header('Referer', referer)
+            request.add_header('Referer', referer)
+        if cookie:
+            request.add_header('Cookie', cookie)
         try:
-            response = urllib2.urlopen(req, data)
+            response = self.opener.open(request, data, timeout=20)
+        except urllib2.HTTPError as e:
+            if e.code != 503:
+                self.xbmc.log('***** _get_url: failed: ' + str(e), level=self.xbmc.LOGERROR)
+                return None
+            cfduid_cookie = e.headers.getheaders('Set-Cookie')[0].split(';')[0]
+            # Might need wait here
+            html = e.read()
+            self.xbmc.log('***** _get_url: 503: cfuid_cookie=' + str(cfuid_cookie), level=self.xbmc.LOGNOTICE)
+            self.xbmc.log('***** _get_url: 503: cf_content=' + str(cf_content), level=self.xbmc.LOGNOTICE)
+            clearance_cookie = cloudflare.cloudflare_clearance(cf_content, cfduid_cookie)
+            cookie_string = '%s;%s' % (cfduid_cookie, clearance_cookie)
+            self.xbmc.log('***** _get_url: 503: cookie_string=' + str(cookie_string), level=self.xbmc.LOGNOTICE)
+            sys.exit(1)
+            return self._get_url(url, filename, referer, data, cookie=cookie_string)
+        except Exception as e:
+            self.xbmc.log('***** _get_url: failed: ' + str(e), level=self.xbmc.LOGERROR)
+            return None
+        return response
+
+    def get_url(self, url, filename=None, referer=None, data=None, cookie=None):
+        response = self._get_url(url, filename, referer, data, cookie=cookie)
+        if response:
             url = response.geturl()
             html = response.read()
             response.close()
             self.cookiejar.save()
-        except urllib2.HTTPError as e:
-            self.xbmc.log('get_url: failed: ' + str(e), level=self.xbmc.LOGERROR)
+        else:
             return None
 
-        if filename and SAVE_FILE:
+        if filename and self.save_file == 'True':
             filename = self.xbmc.translatePath('special://temp/' + filename)
             file = open(filename, 'w')
             file.write(html)
             file.close()
         return html
-
+    
+    def resolve_redirect(self, url):
+        request = Swefilmer.HeadRequest(url)
+        response = self._get_url(url, request=request)
+        if response:
+            location = response.info().getheader('Location')
+            self.xbmc.log('***** resolve_redirect: ' + location,
+                          level=self.xbmc.LOGDEBUG)
+            return location
+        else:
+            return None
+    
     def login(self, username, password):
         """Login to the site.
         First check if cookies from earlier login exist and are not about
@@ -87,7 +126,7 @@ class Swefilmer:
         # TODO: what if user changes settings for credentials and cookies
         # are intact?
         for cookie in self.cookiejar:
-            if cookie.name.find('phpsugar_') > -1:
+            if cookie.name == 'swefilmer_pass' and cookie.domain == 'www.swehd.com':
                 if (cookie.expires - time.time())/3600/24 > 0:
                     return True
                 break
@@ -231,12 +270,12 @@ class Swefilmer:
             name = name[0]
         description = re.findall(
             '>Beskrivning<.*?<p>(.+?)</p>', html, re.DOTALL)
-        self.xbmc.log('scrape_video: description=' + str(description),
+        self.xbmc.log('***** scrape_video: description=' + str(description),
                       level=self.xbmc.LOGDEBUG)
         img = re.findall(
             '<div class="filmaltiimg">.*?<img src="(.+?)".*?</div>', html,
             re.DOTALL)
-        self.xbmc.log('scrape_video: img=' + str(img),
+        self.xbmc.log('***** scrape_video: img=' + str(img),
                       level=self.xbmc.LOGDEBUG)
         players = re.findall('<div id="(.+?)".+?swe.zzz\(\'(.+?)\'', html)
         return name, description, img, self.scrape_video_urls(players, referer)
@@ -244,15 +283,15 @@ class Swefilmer:
     def scrape_video_urls(self, players, referer=None):
         items = []
         for player in players:
-            self.xbmc.log('scrape_video_urls: player=' + str(player),
+            self.xbmc.log('***** scrape_video_urls: player=' + str(player),
                           level=self.xbmc.LOGDEBUG)
             streams = None
             if player[0].find("trailer") > -1: continue
             html = self.yazyaz(player[1])
-            self.xbmc.log('scrape_video_urls: html=' + str(html),
+            self.xbmc.log('***** scrape_video_urls: html=' + str(html),
                           level=self.xbmc.LOGDEBUG)
             url = self.html_parser.unescape(re.findall('<iframe .*?src="(.+?)" ', html)[0])
-            self.xbmc.log('scrape_video_urls: url=' + str(url),
+            self.xbmc.log('***** scrape_video_urls: url=' + str(url),
                           level=self.xbmc.LOGDEBUG)
             document = self.get_url(url, 'document_' + str(player[0]) + '.html', referer=referer)
             if document == None: continue
@@ -275,15 +314,17 @@ class Swefilmer:
                     streams = self.scrape_video_mailru(flashvars[0])
                 elif document.find("document.write(unescape(") > -1:
                     streams = self.scrape_video_mega(document)
+                elif len(re.findall('source src=".+?\.videomega\..+?mp4', document)) > 0:
+                    streams = self.scrape_video_mega2(document)
                 else:
                     streams = self.scrape_video_registered(document)
             if streams and len(streams) > 0:
                 name = urlparse.urlparse(streams[0][1]).netloc
                 items.append((name, streams))
-                self.xbmc.log('scrape_video_urls: streams=' + str(streams),
+                self.xbmc.log('***** scrape_video_urls: streams=' + str(streams),
                               level=self.xbmc.LOGDEBUG)
             else:
-                self.xbmc.log('scrape_video_urls: player %s FAILED: %s' %
+                self.xbmc.log('***** scrape_video_urls: player %s FAILED: %s' %
                               (player[0], url), level=self.xbmc.LOGNOTICE)
         return items
 
@@ -299,11 +340,12 @@ class Swefilmer:
 
     def scrape_video_mailru(self, flashvars):
         url = re.findall('"metadataUrl":"(.+?)"', flashvars)[0]
-        self.xbmc.log('scrape_video_mailru: url=' + str(url),
+        self.xbmc.log('***** scrape_video_mailru: url=' + str(url),
                       level=self.xbmc.LOGDEBUG)
         mailru = self.get_url(url, 'mailru.html')
-        self.xbmc.log('scrape_video_mailru: mailru=' + str(mailru),
+        self.xbmc.log('***** scrape_video_mailru: mailru=' + str(mailru),
                       level=self.xbmc.LOGDEBUG)
+        if mailru == None: return None
         videos = re.findall(',"videos":\[{(.+?)}\],', mailru)
         names = re.findall('"key":"(.+?)"', videos[0])
         urls = [self.addCookies2Url(x) for x in re.findall('"url":"(.+?)"', videos[0])]
@@ -341,19 +383,22 @@ class Swefilmer:
     def scrape_video_jwplayer5(self, document):
         sources = re.findall('sources:\[(.+?)\]', document)[0]
         urls = [(x[1], self.addCookies2Url(x[0].replace('\\x', '').decode('hex'))) for x in re.findall('{"file":"(.+?)", "label":"(.+?)"', sources)]
-        return None
         return urls
 
     def scrape_video_mega(self, html):
         html = [urllib.unquote(x) for x in re.findall('document.write\(unescape\("(.+?)"', html)]
-        #self.xbmc.log("scrape_video_mega: html=" + str(html), level=self.xbmc.LOGDEBUG)
+        self.xbmc.log('***** scrape_video_mega: html=' + str(html), level=self.xbmc.LOGDEBUG)
         try:
             url = [re.findall(',[ ]*file:[ ]*"(.+?)"', x)[0] for x in html]
         except:
-            self.xbmc.log("scrape_video_mega: parsing failed", level=self.xbmc.LOGWARNING)
+            self.xbmc.log('***** scrape_video_mega: parsing failed', level=self.xbmc.LOGWARNING)
             return None
-        #self.xbmc.log("scrape_video_mega: url=" + str(url), level=self.xbmc.LOGDEBUG)
+        self.xbmc.log('***** scrape_video_mega: url=' + str(url), level=self.xbmc.LOGDEBUG)
         url = self.addCookies2Url(url[2])
+        return [('', url)]
+
+    def scrape_video_mega2(self, html):
+        url = self.addCookies2Url(re.findall('source src="(.+?)"', html)[0])
         return [('', url)]
 
     def scrape_video_registered(self, html):
@@ -378,7 +423,7 @@ class Swefilmer:
     def menu_sel(self, url):
         html = self.get_url(url, 'sel.html')
         selections = re.findall('<li class=".*?menu-item"><a href="(.+?)">(.+?)</a>', html, re.DOTALL)
-        self.xbmc.log("menu_sel: selections=" + str(selections), level=self.xbmc.LOGDEBUG)
+        self.xbmc.log('***** menu_sel: selections=' + str(selections), level=self.xbmc.LOGDEBUG)
         return selections
 
     def new_menu_sel(self):

@@ -3,6 +3,7 @@ import re
 import swefilmer
 import sys
 import urllib
+import urlparse
 
 ACTION_NEW = 'new'
 ACTION_TOP = 'top'
@@ -15,17 +16,16 @@ ACTION_NEXT_PAGE = 'next'
 
 class Navigation(object):
 
-    def __init__(self, xbmc, xbmcplugin, xbmcgui, xbmcaddon, swefilmer,
+    def __init__(self, xbmc, xbmcplugin, xbmcgui, settings, swefilmer,
                  plugin_url, handle, params):
         self.xbmc = xbmc
         self.xbmcplugin = xbmcplugin
         self.xbmcgui = xbmcgui
-        self.xbmcaddon = xbmcaddon
+        self.settings = settings
         self.swefilmer = swefilmer
         self.plugin_url = plugin_url
         self.handle = int(handle)
         self.params = self.swefilmer.parameters_string_to_dict(params)
-        self.settings = xbmcaddon.Addon(id='plugin.video.swefilmer')
         self.localize = self.settings.getLocalizedString
         self.select_quality = int(self.settings.getSetting('select_quality'))
 
@@ -54,16 +54,15 @@ class Navigation(object):
         sortable = True
         ix = 0
         try:
-            qualities = [re.findall('[0-9]+', s[0])[0] for s in stream_urls]
+            qualities = [int(re.findall('[0-9]+', s[0])[0]) for s in stream_urls]
             urls = [x[1] for x in stream_urls]
             stream_urls = zip(qualities, urls)
             stream_urls.sort(key=lambda tup: tup[0])
-            qualities = [re.findall('[0-9]+', s[0])[0] for s in stream_urls]
         except:
             self.xbmc.log('quality_select: not sortable: ' + str(stream_urls),
                           level=self.xbmc.LOGNOTICE)
             sortable = False
-            qualities = [s[0] for s in stream_urls]
+        qualities = [str(s[0]) for s in stream_urls]
         if not sortable or self.select_quality == 0:
             dialog = self.xbmcgui.Dialog()
             ix = dialog.select(self.localize(30201), qualities)
@@ -81,6 +80,7 @@ class Navigation(object):
                 if pref < mean: break
                 ix += 1
         url = stream_urls[ix][1]
+        self.xbmc.log('quality_select: url=' + str(url), level=self.xbmc.LOGNOTICE)
         return url
 
     def add_menu_item(self, caption, action, total_items, logged_in=None, url=None,
@@ -217,6 +217,7 @@ class Navigation(object):
     def video(self):
         url = self.params['url']
         html = self.swefilmer.video_html(url)
+        if html == None: return False
         result = self.swefilmer.scrape_video(html, url)
         if result: name, description, img, players = result
         if not result or not players or len(players) == 0:
@@ -253,6 +254,10 @@ class Navigation(object):
                 return False
         else:
             url = streams[0][1]
+        netloc = urlparse.urlparse(url).netloc
+        #self.xbmc.log('video: netloc=' + str(netloc), level=self.xbmc.LOGNOTICE)
+        if len(re.findall('redirector', netloc)) > 0:
+            url = self.swefilmer.resolve_redirect(url)
         list_item = self.xbmcgui.ListItem(name)
         if img:
             list_item.setThumbnailImage(img[0])
@@ -296,8 +301,8 @@ if __name__ == '__main__':
     xbmc = Xbmc(level=xbmc.LOGNOTICE)
     xbmcplugin = Xbmcplugin(xbmc)
     xbmcgui = Xbmcgui()
-    xbmcaddon = Xbmcaddon()
-    swe = swefilmer.Swefilmer(xbmc, xbmcplugin, xbmcgui, xbmcaddon)
-    navigation = Navigation(xbmc, xbmcplugin, xbmcgui, xbmcaddon, swe,
+    addon = Xbmcaddon(id='plugin.video.swefilmer')
+    swe = swefilmer.Swefilmer(xbmc, xbmcplugin, xbmcgui, addon)
+    navigation = Navigation(xbmc, xbmcplugin, xbmcgui, addon, swe,
                             'plugin', '10', '?' + sys.argv[1])
     navigation.dispatch()

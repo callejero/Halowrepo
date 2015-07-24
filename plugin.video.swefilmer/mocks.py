@@ -99,7 +99,7 @@ class Xbmcgui(object):
 
         def select(self, title, alternatives):
             print '[DIALOG SELECT] %s' % title
-            print "\n".join(alternatives)
+            print "\n".join([str(x) for x in alternatives])
             return 0  # Select first one"
 
 
