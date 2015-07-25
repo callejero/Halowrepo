@@ -78,7 +78,7 @@ def categorie():
     addDir('[COLOR yellow]Political[/COLOR]', 'plugin://plugin.video.IRAN/?xcat4x', "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/State_flag_of_Iran_1964-1980.svg/120px-State_flag_of_Iran_1964-1980.svg.png")
     addDir('[COLOR yellow]IRIB[/COLOR]', 'plugin://plugin.video.IRAN/?xcat5x', "http://pounezar.ir/uploads/2015/02/IRIB-_-4.jpg")
     addDir('[COLOR yellow]GEM TVS[/COLOR]', 'plugin://plugin.video.IRAN/?xcat6x', "http://pounezar.ir/uploads/2015/02/IRIB-_-4.jpg")
-    addDir('[COLOR blue]Streamaxit.tv[/COLOR]', 'plugin://plugin.video.IRAN/?xcat7x', "http://pounezar.ir/uploads/2015/02/IRIB-_-4.jpg")
+    addDir('[COLOR yellow]STREAMMAX[/COLOR]', 'plugin://plugin.video.IRAN/?xcat7x', "http://pounezar.ir/uploads/2015/02/IRIB-_-4.jpg")
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 	

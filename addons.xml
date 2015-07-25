@@ -44,7 +44,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.3.6" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="1.3.7" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -238,6 +238,21 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.IRAN" name="[COLOR red]IRAN LIVE[COLOR green] TV[/COLOR]" version="2.7" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Halow TV</summary>
+    <description>Livestreams FOR IRAN TV FREE</description>
+  </extension>
+</addon>
+
 <addon id="skin.sio2" version="3.1.0" name="SiO2" provider-name="FastColors">
   <requires>
     <import addon="xbmc.gui" version="5.3.0"/>
@@ -294,21 +309,6 @@
     <description lang="it">Se ti piace la politica di Apple per le interfacce grafiche "tutto a portata di mano", allora dovresti provare questa Skin. L'ho progettata cercando di mettere il minor numero di click tra te e quello che stai cercando di fare (o di guardare ;) ).[CR]Grazie a Pecinko per Quartz come solida base di partenza.[CR] Grazie ai testers e agli ispiratori:.. Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
 
     <disclaimer>SiO2 - Enjoy</disclaimer>
-  </extension>
-</addon>
-
-<addon id="plugin.video.IRAN" name="[COLOR red]IRAN LIVE[COLOR green] TV[/COLOR]" version="2.7" provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary>Halow TV</summary>
-    <description>Livestreams FOR IRAN TV FREE</description>
   </extension>
 </addon>
 
