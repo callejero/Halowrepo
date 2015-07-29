@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.AKO" name="KarwanTV" version="2.4" provider-name="Halow">
+<addon id="plugin.video.AKO" name="KarwanTV" version="2.7" provider-name="HALOW">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -9,7 +9,19 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary>KARWANTV</summary>
-    <description>Kurdistan Livestreams</description>
+    <summary>HALOW</summary>
+    <description>Kurdistan Livestreams
+
+        http://karwan.tv
+
+for this addon you need to register under
+http://reg.iptvxtra.net/register_kd.php
+
+Multiple registrations are not allowed and will be rewarded with an immediate lock
+The offer, sell and apply for example, Auction portals is prohibited and will be reported immediately to the operator, on Ebay can draw an immediate exclusion for itself.
+
+Please keep in mind you
+
+</description>
   </extension>
 </addon>

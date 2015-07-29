@@ -1,0 +1,15 @@
+<settings>
+    <category label="Login">
+        <setting label="30080" type="sep" />
+        <setting id="user" label="Benutzername eingeben:" type="text" default="xbmcuser"/>
+        <setting id="password" label="Passwort eingeben: " type="text" default="user"/>
+        <setting label="30080" type="sep" />
+		<setting label="                    for this addon Registration is required under ..." type="lsep"/>	
+		<setting label="                                    http://reg.iptvxtra.net/register_kd.php" type="lsep"/>	
+		<setting label="" type="lsep"/>	
+		<setting label="This addon was kindly supported by http://karvan.tv" type="lsep"/>
+		<setting label="" type="lsep"/>	
+		<setting label="Multiple registration or sale of the addon is absolutely not allowed" type="lsep"/>	
+		<setting label="and will be rewarded with an immediate irrevocable lock !" type="lsep"/>
+    </category>
+</settings>
