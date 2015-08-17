@@ -9,6 +9,7 @@ import xbmcaddon
 import xbmcvfs
 import traceback
 import cookielib
+import plugintools
 from addon.common.net import Net
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 try:
@@ -61,7 +62,7 @@ else: SOURCES = []
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.live.Halowtvr3-%s]: %s" %(string))
+        xbmc.log("[addon.live.HalowTVr3-%s]: %s" %(string))
 
 
 def makeRequest(url, headers=None):
@@ -77,17 +78,17 @@ def makeRequest(url, headers=None):
             addon_log('URL: '+url)
             if hasattr(e, 'code'):
                 addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(Halow TV,We failed with error code - "+str(e.code)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(HalowTV,We failed with error code - "+str(e.code)+",10000,"+icon+")")
             elif hasattr(e, 'reason'):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(Halow TV,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(HalowTV,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 				
 def DCTVIndex():
     addon_log("DCTVIndex")
     getData(DCTVBase,'')
-    addDir('Search Her','Search',40,'http://icons.iconarchive.com/icons/iconleak/atrous/256/search-icon.png' ,  FANART,'','','','')
+    addDir('[COLOR gold]Search Her[/COLOR]','Search',40,'http://icons.iconarchive.com/icons/iconleak/atrous/256/search-icon.png' ,  FANART,'','','','')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 		
 	
@@ -215,12 +216,7 @@ def addSource(url=None):
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
         xbmc.executebuiltin("XBMC.Notification(Halow TV,New source added.,5000,"+icon+")")
-        if not url is None:
-            if 'xbmcplus.xb.funpic.de' in url:
-                xbmc.executebuiltin("XBMC.Container.Update(%s?mode=14,replace)" %sys.argv[0])
-            elif 'community-links' in url:
-                xbmc.executebuiltin("XBMC.Container.Update(%s?mode=10,replace)" %sys.argv[0])
-        else: addon.openSettings()
+        addon.openSettings()
 
 
 def rmSource(name):
@@ -245,8 +241,6 @@ def rmSource(name):
 
 
 def get_xml_database(url, browse=False):
-        if url is None:
-            url = 'http://xbmcplus.xb.funpic.de/www-data/filesystem/'
         soup = BeautifulSoup(makeRequest(url), convertEntities=BeautifulSoup.HTML_ENTITIES)
         for i in soup('a'):
             href = i['href']
@@ -271,16 +265,7 @@ def get_xml_database(url, browse=False):
                                 addDir(name,url+href,11,icon,fanart,'','','','','download')
 
 
-def getCommunitySources(browse=False):
-        url = 'http://community-links.googlecode.com/svn/trunk/'
-        soup = BeautifulSoup(makeRequest(url), convertEntities=BeautifulSoup.HTML_ENTITIES)
-        files = soup('ul')[0]('li')[1:]
-        for i in files:
-            name = i('a')[0]['href']
-            if browse:
-                addDir(name,url+name,1,icon,fanart,'','','','','download')
-            else:
-                addDir(name,url+name,11,icon,fanart,'','','','','download')
+
 
 
 def getSoup(url,data=None):
@@ -530,7 +515,7 @@ def GetSublinks(name,url,iconimage,fanart):
             pass
     else:
          dialog=xbmcgui.Dialog()
-         rNo=dialog.select('Halow TV Select A Source', List)
+         rNo=dialog.select('HalowTV Select A Source', List)
          if rNo>=0:
              rName=str(List[rNo])
              rURL=str(ListU[rNo])
@@ -545,14 +530,14 @@ def GetSublinks(name,url,iconimage,fanart):
 				
 def SearchChannels():
 #hakamac code
-    KeyboardMessage = 'Name of channel show or movie on Halow TV'
+    KeyboardMessage = 'Name of channel show or movie'
     Searchkey = ''
     keyboard = xbmc.Keyboard(Searchkey, KeyboardMessage)
     keyboard.doModal()
     if keyboard.isConfirmed():
        Searchkey = keyboard.getText().replace('\n','').strip()
        if len(Searchkey) == 0: 
-          xbmcgui.Dialog().ok('Halow TV', 'Nothing Entered')
+          xbmcgui.Dialog().ok('HalowTV', 'Nothing Entered')
           return	   
     
     Searchkey = Searchkey.lower()
@@ -563,7 +548,7 @@ def SearchChannels():
     ReadChannel = 0
     FoundMatch = 0
     progress = xbmcgui.DialogProgress()
-    progress.create('Halow TV Searching Please wait',' ')
+    progress.create('HalowTV Searching Please wait',' ')
 	
     while FoundChannel <> ReadChannel:
         BaseSearch = List[ReadChannel].strip()
@@ -748,7 +733,7 @@ def getItems(items,fanart):
                     for i in item('veetle'):
                         if not i.string == None:
                             veetle = 'plugin://plugin.video.veetle/?channel='+i.string
-                            url.append(veetle)
+                        url.append(veetle)
                 elif len(item('ilive')) >0:
                     for i in item('ilive'):
                         if not i.string == None:
@@ -756,11 +741,22 @@ def getItems(items,fanart):
                                 ilive = 'plugin://plugin.video.tbh.ilive/?url=http://www.streamlive.to/view/'+i.string+'&amp;link=99&amp;mode=iLivePlay'
                             else:
                                 ilive = 'plugin://plugin.video.tbh.ilive/?url='+i.string+'&amp;link=99&amp;mode=iLivePlay'
+                        url.append(ilive)
                 elif len(item('yt-dl')) >0:
                     for i in item('yt-dl'):
                         if not i.string == None:
                             ytdl = i.string + '&mode=18'
-                            url.append(ytdl)
+                        url.append(ytdl)
+                elif len(item('ytlist')) >0:
+                    for i in item('ytlist'):
+                        thumbnail = item('thumbnail')[0].string
+                        title = item('title')[0].string
+                        plugintools.add_item( 
+                        #action="", 
+                        title=title,
+                        url="plugin://plugin.video.youtube/user/"+i.string+"/",
+                        thumbnail= thumbnail,
+                        folder=True )
                 elif len(item('utube')) >0:
                     for i in item('utube'):
                         if not i.string == None:
@@ -1942,12 +1938,12 @@ def urlsolver(url):
     try:
         import genesisresolvers
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(Halow TV,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
+        xbmc.executebuiltin("XBMC.Notification(HalowTv,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
 
     resolved=genesisresolvers.get(url).result
     if url == resolved or resolved is None:
         #import
-        xbmc.executebuiltin("XBMC.Notification(Halow,Using Url does not exist right now.. - ,5000)")
+        xbmc.executebuiltin("XBMC.Notification(HalowTV,Using Urlresolver module.. - ,5000)")
         import urlresolver
         host = urlresolver.HostedMediaFile(url)
         if host:
@@ -2005,12 +2001,12 @@ def play_playlist(name, mu_playlist):
 
 def download_file(name, url):
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('Halow TV','Choose a location to save files.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('HalowTV','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('Halow TV', 'Do you want to add this file as a source?')
+        ret = dialog.yesno('HalowTV', 'Do you want to add this file as a source?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2036,11 +2032,11 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                 contextMenu.append(('Download','XBMC.RunPlugin(%s?url=%s&mode=9&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
             elif showcontext == 'fav':
-                contextMenu.append(('Remove from Halow TV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                contextMenu.append(('Remove from HalowTV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(name))))
 									
             if not name in FAV:
-                contextMenu.append(('Add to Halow TV Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Add to HalowTV Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2145,7 +2141,7 @@ def search(site_name,search_term=None):
                 SaveToFile(history,page_data,append=True)
                 return url
         else:
-            xbmc.executebuiltin("XBMC.Notification(Halow TV,No IMDB match found ,7000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(HalowTV,No IMDB match found ,7000,"+icon+")")
 ## Lunatixz PseudoTV feature
 def ascii(string):
     if isinstance(string, basestring):
@@ -2174,9 +2170,9 @@ def SetViewThumbnail():
     if skin_used == 'skin.confluence':
         xbmc.executebuiltin('Container.SetViewMode(50)')
     elif skin_used == 'skin.aeon.nox':
-        xbmc.executebuiltin('Container.SetViewMode(51)') 
+        xbmc.executebuiltin('Container.SetViewMode(511)') 
     else:
-        xbmc.executebuiltin('Container.SetViewMode(50)')
+        xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 	
 def pluginquerybyJSON(url):
@@ -2297,7 +2293,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Remove from Halow TV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Remove from HalowTv Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2309,7 +2305,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Add to Halow TV Favorites','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Add to HalowTV Favorites','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
        
         if not playlist is None:
@@ -2362,6 +2358,8 @@ def get_epg(url, regex):
             addon_log('regex failed')
             addon_log(regex)
             return
+
+
 
 
 xbmcplugin.setContent(int(sys.argv[1]), 'movies')
@@ -2428,7 +2426,7 @@ try:
 except:
     pass
 
-if int(Mode[-1:]) <> 5:
+if int(Mode[-1:]) <> 7:
    mode=1
 addon_log("Mode: "+str(mode))
 if not url is None:
@@ -2495,9 +2493,7 @@ elif mode==9:
     addon_log("download_file")
     download_file(name, url)
 
-elif mode==10:
-    addon_log("getCommunitySources")
-    getCommunitySources()
+
 
 elif mode==11:
     addon_log("addSource")
@@ -2517,20 +2513,14 @@ elif mode==13:
     addon_log("play_playlist")
     play_playlist(name, playlist)
 
-elif mode==14:
-    addon_log("get_xml_database")
-    get_xml_database(url)
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
 
 elif mode==15:
     addon_log("browse_xml_database")
     get_xml_database(url, True)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
-elif mode==16:
-    addon_log("browse_community")
-    getCommunitySources(True)
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
 
 elif mode==17:
     addon_log("getRegexParsed")
@@ -2538,13 +2528,13 @@ elif mode==17:
     if url:
         playsetresolved(url,name,iconimage,setresolved)
     else:
-        xbmc.executebuiltin("XBMC.Notification(Halow TV,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(HalowTV,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
         import youtubedl
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(Halow TV,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
+        xbmc.executebuiltin("XBMC.Notification(HalowTV,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
     stream_url=youtubedl.single_YD(url)
     playsetresolved(stream_url,name,iconimage)
 elif mode==19:

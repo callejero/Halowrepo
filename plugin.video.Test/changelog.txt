@@ -1,3 +1,6 @@
+Version 6.0.7 
+fix youtube
+
 Version 6.6.5
 Add Veetle
 update allt
