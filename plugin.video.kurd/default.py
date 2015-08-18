@@ -35,7 +35,7 @@ def main():
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': 'KurdSat News'}, icons + 'kurdsat-news-tv.png')
     add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': 'Kurdistan TV'}, icons + 'kurdistan-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Zagros TV'}, icons + 'zagros-tv.png')
-    add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt1/_definst_/mp4:nrt1.stream_1'					,{ 'title': 'NRT TV HD'}, icons + 'nalia-tv.png')
+    add_video_item('http://prxy-wza-02.iptv-playoutcenter.de/nrt1/nrt1.stream_1/jwplayer.m3u8'					,{ 'title': 'NRT TV HD'}, icons + 'nalia-tv.png')
     add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt2/_definst_/mp4:nrt2.stream_1'				,{ 'title': 'Nalia 2 TV HD'}, icons + 'nalia-2-tv.png')
     add_video_item('rtsp://livestreaming.itworkscdn.net/rudawlive/rudawtv'					,{ 'title': 'Rudaw TV'}, icons + 'rudaw.png')
     add_video_item('rtmp://46.163.68.239/live/livestream'						,{ 'title': 'KNN TV'}, icons + 'knn-tv.png')
