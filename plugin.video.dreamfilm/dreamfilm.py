@@ -92,6 +92,10 @@ def streams_from_player_url(url):
         return resolvers.mailru_streams(url)
     if 'picasaweb.google.com' in url:
         return resolvers.picasa_streams(url)
+    if 'ok.ru' in url:
+        return resolvers.okru_streams(url)
+    if 'vkpass.com' in url:
+        return resolvers.vkpass_streams(url)
 
     html = _fetch_html(url)
     if 'vk.com' in url:
@@ -100,9 +104,11 @@ def streams_from_player_url(url):
         return resolvers.google_streams(html)
     if 'dreamfilm.se' in url:
         return resolvers.leanback_streams(html)
-    if 'vkpass.com' in url:
-        return resolvers.vkpass_streams(html)
     return [('video', url)]
+
+
+def subtitles_from_url(url):
+    return re.findall('&c\d+_file=(?P<url>[^&]+)', url)
 
 
 def _search_url(q, page=0):
@@ -153,6 +159,11 @@ def _strip_bom(string, bom=BOM_UTF8):
         return string
 
 def _fetch_html(url):
+    opener = urllib2.build_opener()
+    opener.addheaders = [('User-agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X; en-us) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53')]
+    response = opener.open(url)
+    return response.read()
+
     response = urllib2.urlopen(url)
     html = response.read()
     return html

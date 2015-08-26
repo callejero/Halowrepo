@@ -70,7 +70,7 @@ def mailru_streams(url):
     metadata_url = html[metadata_url_start:metadata_url_end]
 
     metadata_response =  urllib2.urlopen(metadata_url)
-    metadata = json.loads(metadata_response.read()) 
+    metadata = json.loads(metadata_response.read())
 
     # XBMC player needs cookies to play these
     xbmc_cookies = '|Cookie=' + urllib.quote(cookie_string)
@@ -79,25 +79,106 @@ def mailru_streams(url):
     return streams
 
 
-def vkpass_streams(html):
-    identifier = "vsource=[{file:"
-    vsource_start = html.index(identifier) + len(identifier) + 1
-    vsource_end = html.index("\"", vsource_start + 1)
+def _okru_to_res(string):
+    string = string.strip()
+    resolution = string
+    if string == 'full':
+        resolution = '1080p'
+    elif string == 'hd':
+        resolution = '720p'
+    elif string == 'sd':
+        resolution = '480p'
+    elif string == 'low':
+        resolution = '360p'
+    elif string == 'lowest':
+        resolution = '240p'
+    elif string == 'mobile':
+        resolution = '144p'
 
-    return [('stream', html[vsource_start : vsource_end])]
+    return resolution
 
 
-def picasa_streams(url):
-    req = urllib2.Request(url)
+def okru_streams(url):
+    HEADERS = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    }
+
+    id = re.search('\d+', url).group(0)
+    json_url = 'http://ok.ru/dk?cmd=videoPlayerMetadata&mid=' + id
+
+    req = urllib2.Request(json_url, headers=HEADERS)
     response = urllib2.urlopen(req)
     source = response.read()
     response.close()
 
-    result = re.search('{"content":(\[{"url":.*?\])', source)
-    links = json.loads(result.groups(1)[0])
+    json_source = json.loads(source)
 
     sources = []
-    for l in links:
+    for source in json_source['videos']:
+        name = _okru_to_res(source['name'])
+        link = '%s|User-Agent=%s&Accept=%s'
+        link = link % (source['url'], HEADERS['User-Agent'], HEADERS['Accept'])
+        item = (name, link)
+        sources.append(item)
+
+    return sources
+
+
+def vkpass_streams(url):
+    HEADERS = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Referer': 'http://www.dreamfilmhd.org/API/api.php'
+    }
+
+    req = urllib2.Request(url, headers=HEADERS)
+    response = urllib2.urlopen(req)
+    html = response.read()
+    response.close()
+
+    return _vkpass_streams_from_html(html)
+
+def _vkpass_streams_from_html(html):
+    identifier = "vsource=["
+    vsource_start = html.index(identifier) + len(identifier) - 1
+    vsource_end = html.index("]", vsource_start + 1) + 1
+
+    file_start = html.find('file:', vsource_start)
+    formats = []
+
+    while file_start != -1 and file_start < vsource_end:
+        quote_start = file_start + 6
+        quote_end = html.find('"', quote_start + 1)
+        url = html[quote_start : quote_end]
+
+        label_start = html.find('label:', quote_end)
+        quote_start = label_start + 7
+        quote_end = html.find('"', quote_start + 1)
+        label = html[quote_start : quote_end]
+
+        formats.append((label, url))
+        file_start = html.find('file:', quote_end)
+
+
+    return formats
+
+
+def picasa_streams(url):
+    m = re.search('picasaweb.google.com/(?P<user>[^/]+)/(?P<album>[^?]+)\?authkey=(?P<authkey>[^#]+)#?(?P<photoid>[^?]+)?', url)
+    json_url = 'https://picasaweb.google.com/data/entry/base'
+    json_url += '/user/' + m.group('user')
+    json_url += '/album/' + m.group('album')
+    json_url += '/photoid/' + m.group('photoid')
+    json_url += '?alt=json'
+    json_url += '&authkey=' + m.group('authkey')
+
+    response = urllib2.urlopen(json_url)
+    data = json.load(response)
+    response.close()
+
+    sources = []
+    for l in data['entry']['media$group']['media$content']:
         if l["type"].startswith("video"):
             name = "{height}p".format(height=l["height"])
             link = l["url"]
@@ -109,7 +190,10 @@ def picasa_streams(url):
 
 if __name__ == '__main__':
     #print mailru_streams('http://videoapi.my.mail.ru/videos/embed/mail/mr.whoare/video/_myvideo/505.html')
-    response = urllib2.urlopen("http://vkpass.com/token/bdrxwnlzfjpq/m123m/film/po-17915/watching.html?cap&c1_file=http://dreamvtt.com/srt/1/Poker.Night.2014.720p.BluRay.x264.YIFY.vtt&c1_label=English")
-    html = response.read()
-    print vkpass_streams(html)
+    #response = urllib2.urlopen("http://vkpass.com/token/bdrxwnlzfjpq/m123m/film/po-17915/watching.html?cap&c1_file=http://dreamvtt.com/srt/1/Poker.Night.2014.720p.BluRay.x264.YIFY.vtt&c1_label=English")
+    #html = response.read()
+    #print vkpass_streams(html)
     #print okru_streams('http://www.ok.ru/video/30025452153')
+    #url = 'https://picasaweb.google.com/111770605384240810365/GameOfThronesS04?authkey=Gv1sRgCPLtx-O2nPmYFw#6151744529773049170'
+    url = 'https://picasaweb.google.com/105596503743456265443/Random?authkey=Gv1sRgCMaE9_Kn5b2L8QE'
+    print(picasa_streams(url))
