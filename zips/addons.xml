@@ -300,7 +300,7 @@ due to the lack of people being bothered to give me feedback. people wishing to 
 
 <addon id="plugin.video.Test"
        name="[COLOR red]HALOW[COLOR green]LIVE[/COLOR]"
-       version="6.0.8"
+       version="6.0.9"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
