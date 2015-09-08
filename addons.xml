@@ -1,5 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="script.module.urlresolver" 
+     name="URLResolver" 
+     version="2.6.0.01" 
+     provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="plugin.video.youtube" version="4.4.7"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>    
+  </extension>
+</addon>
+
 <addon id="plugin.video.Test"
        name="[COLOR red]HALOW[COLOR green]LIVE[/COLOR]"
        version="6.0.9"
@@ -80,24 +98,6 @@
     <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
     <website>https://code.google.com/p/p2p-strm/</website>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="script.module.urlresolver" 
-     name="URLResolver" 
-     version="2.10.0" 
-     provider-name="Eldorado">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="plugin.video.youtube" version="4.4.7"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-    <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>    
   </extension>
 </addon>
 
