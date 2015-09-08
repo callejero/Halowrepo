@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.gul" name="Gul  LIVE" version="5.0" provider-name="Halow">
+<addon id="plugin.video.gul" name="Gul LIVE" version="5.78" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -19,8 +19,8 @@
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en"></summary>
-    <description lang="en"></description>
+    <summary lang="en">Halow TV</summary>
+    <description lang="en">Halow Add-ons</description>
     <platform>all</platform>
   </extension>
 </addon>
