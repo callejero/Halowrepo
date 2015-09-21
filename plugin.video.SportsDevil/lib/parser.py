@@ -226,10 +226,10 @@ class Parser(object):
                         if not jsUrl.startswith('http://'):
                             jsUrl = urllib.basejoin(startUrl,jsUrl)
                         streamerName = getHostName(jsUrl)
-                        jsSource = getHTML(jsUrl, None, startUrl, True, False)
+                        jsSource = getHTML(jsUrl, None, startUrl, True, False, False)
                         phpUrl = findPHP(jsSource, streamId)
                         if phpUrl:
-                            data = getHTML(phpUrl, None, startUrl, True, True)
+                            data = getHTML(phpUrl, None, startUrl, True, False, True)
                             item = self.__findRTMP(data, phpUrl, lItem)
                             if item:
                                 
@@ -637,6 +637,9 @@ class Parser(object):
 
             elif command == 'gAesDec':
                 src = crypt.gAesDec(src,item.infos[params])
+            
+            elif command == 'aesDec':
+                src = crypt.aesDec(src,item.infos[params])
                 
             elif command == 'getCookies':
                 src = cc.getCookies(params, src)
