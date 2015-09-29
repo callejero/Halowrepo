@@ -42,7 +42,7 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
 
 
 sourceSitebvls = 'http://bvls2016.sc'      
-DCTVBase = 'aHR0cDovL3Bhc3RlYmluLmNvbS9yYXcucGhwP2k9OEZxYWI5UUg='
+DCTVBase = 'aHR0cDovL2hhbG93dHYueDEwLmJ6L2xpdmUuY2hhbm5lbHMueG1s'
 
 
 
