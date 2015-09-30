@@ -93,3 +93,11 @@ version 0.1.9
 Added ok.ru resolver
 Add subtitles
 Fix vkpass resolver
+
+version 0.1.10
+=============
+Fix vkpass resolver
+
+version 0.1.11
+=============
+Fix vkpass resolver

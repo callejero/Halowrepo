@@ -3,6 +3,7 @@ import urllib2
 import json
 import HTMLParser
 import re
+import binascii
 
 
 def vk_streams(html):
@@ -125,7 +126,7 @@ def okru_streams(url):
     return sources
 
 
-def vkpass_streams(url):
+def vkpass_streams(url, recursive_call=False):
     HEADERS = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -137,10 +138,29 @@ def vkpass_streams(url):
     html = response.read()
     response.close()
 
-    return _vkpass_streams_from_html(html)
+    return _vkpass_streams_from_html(html, recursive_call)
 
-def _vkpass_streams_from_html(html):
+def _vkpass_streams_from_html(html, recursive_call):
+    HEADERS = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    }
+
     identifier = "vsource=["
+
+    if identifier not in html:
+        binurl = re.search(r"src= \"javascript:decodeURIComponent\(escape\(window.atob\(\\'(?P<binurl>.*)\\'\)\)\)\"", html) #\(\\\'(?P<binurl>.*)\\\'\)\)', html)
+        if binurl:
+            url = binascii.a2b_base64(binurl.group('binurl'))
+            return _vkpass_streams_from_html(url, True)
+
+        # No match, try clear text decoding
+        redirect_url = re.search('src=\"(?P<url>.*?)\?', html)
+        if redirect_url and not recursive_call:
+            return vkpass_streams(redirect_url.group('url'), True)
+        else:
+            return None
+
     vsource_start = html.index(identifier) + len(identifier) - 1
     vsource_end = html.index("]", vsource_start + 1) + 1
 
@@ -156,8 +176,10 @@ def _vkpass_streams_from_html(html):
         quote_start = label_start + 7
         quote_end = html.find('"', quote_start + 1)
         label = html[quote_start : quote_end]
+        link = '%s|User-Agent=%s&Accept=%s'
+        link = link % (url, HEADERS['User-Agent'], HEADERS['Accept'])
 
-        formats.append((label, url))
+        formats.append((label, link))
         file_start = html.find('file:', quote_end)
 
 
@@ -196,4 +218,5 @@ if __name__ == '__main__':
     #print okru_streams('http://www.ok.ru/video/30025452153')
     #url = 'https://picasaweb.google.com/111770605384240810365/GameOfThronesS04?authkey=Gv1sRgCPLtx-O2nPmYFw#6151744529773049170'
     url = 'https://picasaweb.google.com/105596503743456265443/Random?authkey=Gv1sRgCMaE9_Kn5b2L8QE'
-    print(picasa_streams(url))
+    url = 'http://vkpass.com/token/bdrxwnlzfjpq/vklhash/Pw7Iy8MztzzwN6xh7nOhf6o80rxCAYIhP8xiQFZ2fGXGWU7DkuzOqurGGBoJoMTvOUqd6XOGaWciR1FfSDFw7Q=='
+    print(vkpass_streams(url))
